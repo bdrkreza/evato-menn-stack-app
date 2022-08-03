@@ -1,0 +1,178 @@
+.swiper-button-prev,
+.swiper-button-next {
+  height: 45px;
+  width: 45px;
+  z-index: 10;
+  transform: translateY(50%);
+  color: var(--primary);
+  border-radius: 8px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 25px;
+  display: none;
+}
+.swiper-button-next {
+  background-image: url(../../assets/image/circled-right.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-prev {
+  background-image: url(../../assets/image/circled-left.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.trending hr {
+  color: inherit;
+  background-color: currentColor;
+  border: 1;
+  opacity: 0.25;
+}
+
+.trending .section-title {
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.trending .section-title span {
+  font-size: large;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 10%;
+}
+
+// trending-carousel style
+.trending-card {
+  box-shadow: 1px 1px #888888;
+  border: 1px solid #f2eee2;
+  position: relative;
+  overflow: hidden;
+}
+
+.trending-card figure {
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+.trending-card figure > a {
+  background-color: #fafafa;
+  display: block;
+}
+.trending-card figure ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: -50px;
+  top: 20px;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+}
+.trending-card:hover figure ul {
+  right: 15px;
+}
+.trending-card figure ul li a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 15px;
+  background: #eb4141;
+  margin-bottom: 7px;
+  border-radius: 50%;
+  line-height: 35px;
+  color: #fff;
+}
+.trending-card figure ul li a:hover {
+  color: #fff;
+  background: #e50663;
+}
+.trending-card .trending-content {
+  text-align: center;
+  padding: 20px;
+}
+.trending-card .trending-content .category {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #ff007d;
+  font-weight: 600;
+}
+.trending-card .trending-content h3 {
+  font-weight: 600;
+  margin: 8px 0 10px;
+  font-size: 20px;
+}
+.trending-card .trending-content h3 a {
+  color: #1f2d30;
+}
+.trending-card .trending-content h3 a:hover {
+  color: #e64646;
+}
+.trending-card .trending-content .rating {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.trending-card .trending-content .price {
+  font-size: 18px;
+  color: #ff0000;
+}
+.trending-card .trending-content .price span {
+  color: #6f6f6f;
+  text-decoration: line-through;
+  padding-left: 5px;
+  font-weight: 300;
+}
+.trending-card .add-to-cart {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+  height: 105px;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.trending-card:hover .add-to-cart {
+  visibility: visible;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+.trending-card .add-to-cart .default-btn {
+  margin-top: 28px;
+  padding: 8px 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.trending-card .category {
+  margin: 0;
+}
+
+.default-btn {
+  background-color: #c93c3c;
+  color: #fff;
+  border: 1px solid #c23c3c;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}

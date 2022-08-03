@@ -11,6 +11,7 @@
 .footer {
   display: flex;
   flex: 1;
+  margin-top: 50px;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;

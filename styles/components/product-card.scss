@@ -1,0 +1,126 @@
+.card-container {
+  box-shadow: 1px 1px #888888;
+  border: 1px solid #f2eee2;
+  position: relative;
+  overflow: hidden;
+  .add-to-cart {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    height: 105px;
+    -moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    .add-to-btn {
+      margin-top: 28px;
+      padding: 8px 25px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+
+  &:hover .add-to-cart {
+    visibility: visible;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  &:hover figure ul {
+    right: 15px;
+  }
+
+  figure {
+    position: relative;
+    margin: 0;
+    text-align: center;
+
+    a {
+      background-color: #fafafa;
+      display: block;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      right: -50px;
+      top: 20px;
+      transition: 0.6s;
+      -webkit-transition: 0.6s;
+      li a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        font-size: 15px;
+        background: #eb4141;
+        margin-bottom: 7px;
+        border-radius: 50%;
+        line-height: 35px;
+        color: #fff;
+      }
+      li a:hover {
+        color: #fff;
+        background: #e50663;
+      }
+    }
+    a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .card-content {
+    text-align: center;
+    padding: 20px;
+    .category {
+      display: inline-block;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #ff007d;
+      font-weight: 600;
+    }
+    h3 {
+      font-weight: 600;
+      margin: 8px 0 10px;
+      font-size: 20px;
+      a {
+        color: #1f2d30;
+        &:hover {
+          color: #e64646;
+        }
+      }
+    }
+    .rating {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 18px;
+      color: #ff0000;
+      span {
+        color: #6f6f6f;
+        text-decoration: line-through;
+        padding-left: 5px;
+        font-weight: 300;
+      }
+    }
+  }
+  .add-to-btn {
+    background-color: #c93c3c;
+    color: #fff;
+    border: 1px solid #c23c3c;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+  }
+}
