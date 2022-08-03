@@ -15,12 +15,14 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+:root {
+  --border-color: #e0e0e0;
+  --primary: #c9151b;
+  --primary-secondary: #f5515f;
+  --placeholder: #d0d3d6;
+  --background: #f5f6f7;
+  --white: #fff;
+  --dark: rgb(0, 0, 0) 7;
 }
+
+@import "./components/navbar.scss";
