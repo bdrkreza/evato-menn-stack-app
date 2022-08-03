@@ -31,13 +31,6 @@ class MyDocument extends Document<DocumentProps> {
     return (
       <Html>
         <Head>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="keywords" content="" />
-          <meta name="description" content="" />
-          <meta name="author" content="" />
-
           {/* Bootstrap CSS */}
           <link
             rel="stylesheet"
@@ -45,14 +38,7 @@ class MyDocument extends Document<DocumentProps> {
             integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
             crossOrigin="anonymous"
           />
-
-          {/* Favicon */}
-          <link
-            rel="shortcut icon"
-            href="images/favicon.ico"
-            type="image/x-icon"
-          />
-          {/* style */}
+          {/* swiper CSS */}
         </Head>
         <body>
           <Main />
