@@ -24,5 +24,9 @@ a {
   --white: #fff;
   --dark: rgb(0, 0, 0) 7;
 }
-
+@import "./style.scss";
 @import "./components/navbar.scss";
+@import "./components/banner.scss";
+@import "./components/trending.scss";
+@import "./components/product-card.scss";
+@import "./components/product-carousel.scss";

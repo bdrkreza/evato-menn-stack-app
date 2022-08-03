@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { HeroBanner } from "../components";
+import {
+  FeaturedProducts,
+  GamingProducts,
+  HeroBanner,
+  Trending,
+  UpcomingProducts,
+} from "../components";
 
 import styles from "../styles/Home.module.css";
 
@@ -16,6 +22,10 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <HeroBanner />
+        <Trending />
+        <FeaturedProducts />
+        <GamingProducts />
+        <UpcomingProducts />
       </main>
 
       <footer className={styles.footer}>
