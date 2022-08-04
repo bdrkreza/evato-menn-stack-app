@@ -15,7 +15,7 @@ export default function HeroBanner() {
   }, []);
   return (
     <div className="container">
-      <div className="mt-2">
+      <div className="banner">
         {/* Top Carousel section */}
         <TopSlider data={img} />
         <div className="mt-3">
@@ -48,7 +48,7 @@ export default function HeroBanner() {
               return (
                 <div>
                   <SwiperSlide key={img.id}>
-                    <div className="slider-img">
+                    <div className="banner-img">
                       <img src={img.img} alt="banner image" />
                     </div>
                   </SwiperSlide>

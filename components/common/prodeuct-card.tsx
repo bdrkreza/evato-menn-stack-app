@@ -9,13 +9,13 @@ export default function ProductCard({ data }: any) {
     <>
       <div className="card-container">
         <figure>
-          <a href="#">
+          <div>
             <img
               className="w-100 h-100"
               src={data?.img}
               alt="Publication Image"
             />
-          </a>
+          </div>
 
           <ul>
             <li>
@@ -39,9 +39,9 @@ export default function ProductCard({ data }: any) {
 
         <div className="card-content">
           <span className="category">T-shirt</span>
-          <h3>
-            <a href="#">{data?.name}</a>
-          </h3>
+          <a href="#">
+            <h3>{data?.name}</h3>
+          </a>
           <div className="rating">
             <Rating
               name="half-rating-read"

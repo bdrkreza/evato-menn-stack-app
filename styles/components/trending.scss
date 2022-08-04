@@ -1,31 +1,31 @@
-.swiper-button-prev,
-.swiper-button-next {
-  height: 45px;
-  width: 45px;
-  z-index: 10;
-  transform: translateY(50%);
-  color: var(--primary);
-  border-radius: 8px;
-}
+// .swiper-button-prev,
+// .swiper-button-next {
+//   height: 45px;
+//   width: 45px;
+//   z-index: 10;
+//   transform: translateY(50%);
+//   color: var(--primary);
+//   border-radius: 8px;
+// }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 25px;
-  display: none;
-}
-.swiper-button-next {
-  background-image: url(../../assets/image/circled-right.png);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-}
+// .swiper-button-prev::after,
+// .swiper-button-next::after {
+//   font-size: 25px;
+//   display: none;
+// }
+// .swiper-button-next {
+//   background-image: url(../../assets/image/circled-right.png);
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+//   background-position: center;
+// }
 
-.swiper-button-prev {
-  background-image: url(../../assets/image/circled-left.png);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-}
+// .swiper-button-prev {
+//   background-image: url(../../assets/image/circled-left.png);
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+//   background-position: center;
+// }
 
 .trending hr {
   color: inherit;

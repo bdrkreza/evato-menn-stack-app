@@ -1,23 +1,23 @@
 export const slider = [
   {
     id: "01",
-    img: "https://i.ibb.co/SK1ZQ1h/sell.png",
+    img: "image/Antec-PC-products.jpg",
   },
   {
     id: "02",
-    img: "https://i.ibb.co/GQH9yny/sell1.png",
+    img: "image/Corsair-components-1.jpg",
   },
   {
     id: "03",
-    img: "https://i.ibb.co/j3yqbSS/shell2.png",
+    img: "image/Deepcool-components.jpg",
   },
   {
     id: "04",
-    img: "https://i.ibb.co/SK1ZQ1h/sell.png",
+    img: "image/Fantech-components.jpg",
   },
   {
     id: "05",
-    img: "https://i.ibb.co/GQH9yny/sell1.png",
+    img: "image/projector-slider-2-1280x420.png",
   },
 ];
 

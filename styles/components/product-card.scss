@@ -85,17 +85,16 @@
       color: #ff007d;
       font-weight: 600;
     }
-    h3 {
-      font-weight: 600;
-      margin: 8px 0 10px;
-      font-size: 20px;
-      a {
-        color: #1f2d30;
-        &:hover {
-          color: #e64646;
-        }
+
+    a {
+      color: #1f2d30;
+      h3 {
+        font-weight: 600;
+        margin: 8px 0 10px;
+        font-size: 20px;
       }
     }
+
     .rating {
       padding: 0;
       margin: 0;

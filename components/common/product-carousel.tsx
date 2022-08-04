@@ -21,7 +21,7 @@ export default function ProductCarousel() {
         <Swiper
           spaceBetween={10}
           slidesPerView={1}
-          navigation
+          navigation={true}
           modules={[Navigation, Autoplay]}
           breakpoints={{
             // when window width is >= 640px
