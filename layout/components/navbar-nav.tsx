@@ -5,7 +5,7 @@ import { FiChevronDown } from "react-icons/fi";
 import CategoryDropdown from "./categoryDropdown";
 type Props = {};
 
-export default function ScrollTop({}: Props) {
+export default function Navbar_nav({}: Props) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function ScrollTop({}: Props) {
             : "navbar navbar-expand-md navbar-2"
         }
       >
-        <div className="container">
+        <div className="container nav-container">
           <ul className="navbar-nav navbar-nav-1">
             <div className="dropdown dropdown-box">
               <li className="nav-item">

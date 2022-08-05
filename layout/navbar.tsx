@@ -1,4 +1,4 @@
-import ScrollTop from "./components/scrollTop";
+import NavbarNav from "./components/navbar-nav";
 import SearchBar from "./components/searchBar";
 import TopBar from "./components/topbar";
 
@@ -9,7 +9,7 @@ export default function Navbar({}: Props) {
     <div>
       <TopBar />
       <SearchBar />
-      <ScrollTop />
+      <NavbarNav />
     </div>
   );
 }
