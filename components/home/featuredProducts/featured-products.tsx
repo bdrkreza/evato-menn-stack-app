@@ -1,8 +1,13 @@
+import { ProductItem } from "../../../contracts/product.type";
 import ProductCarousel from "../../common/product-carousel";
 
-type Props = {};
-
-export default function FeaturedProducts({}: Props) {
+type Props = {
+  products: Array<ProductItem> | undefined;
+};
+export default function FeaturedProducts({ products }: Props) {
+  const product: ProductItem[] | undefined = products?.filter(
+    (item: ProductItem) => item?.category === "featured"
+  );
   return (
     <div>
       <div className="container mt-5">
@@ -12,7 +17,7 @@ export default function FeaturedProducts({}: Props) {
           </h4>
         </div>
         <div>
-          <ProductCarousel />
+          <ProductCarousel products={product} />
         </div>
       </div>
     </div>

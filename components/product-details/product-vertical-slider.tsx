@@ -11,7 +11,7 @@ interface IProps {
   img: string;
 }
 
-const ProductSlider: React.FC<any> = () => {
+const ProductVerticalSlider: React.FC<any> = () => {
   const [slectedImage, setSelectedImage] = useState<string>(data[0].img);
 
   const handleChangeImage = (e: any) => {
@@ -33,7 +33,11 @@ const ProductSlider: React.FC<any> = () => {
           direction="horizontal"
           breakpoints={{
             990: { direction: "vertical", spaceBetween: 10, slidesPerView: 3 },
-            480: { spaceBetween: 5, slidesPerView: 4 },
+            480: {
+              direction: "horizontal",
+              spaceBetween: 10,
+              slidesPerView: 3,
+            },
           }}
           spaceBetween={3}
           slidesPerView={3}
@@ -57,4 +61,4 @@ const ProductSlider: React.FC<any> = () => {
   );
 };
 
-export default ProductSlider;
+export default ProductVerticalSlider;

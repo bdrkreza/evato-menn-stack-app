@@ -46,13 +46,11 @@ export default function HeroBanner() {
             {img.map((img: any, index: any) => {
               if (index >= 5) return;
               return (
-                <div>
-                  <SwiperSlide key={img.id}>
-                    <div className="banner-img">
-                      <img src={img.img} alt="banner image" />
-                    </div>
-                  </SwiperSlide>
-                </div>
+                <SwiperSlide key={img.id}>
+                  <div className="banner-img">
+                    <img src={img.img} alt="banner image" />
+                  </div>
+                </SwiperSlide>
               );
             })}
           </Swiper>

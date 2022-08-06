@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Rating } from "@mui/material";
+import Link from "next/link";
 import { BsHeartFill } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 import { FiRefreshCw } from "react-icons/fi";
@@ -9,12 +9,18 @@ export default function ProductCard({ data }: any) {
     <>
       <div className="card-container">
         <figure>
-          <div>
-            <img
-              className="w-100 h-100"
-              src={data?.img}
-              alt="Publication Image"
-            />
+          <div className="link">
+            <Link
+              href={`/product/[data.id]`}
+              as={`/product/${data.id}`}
+              passHref
+            >
+              <img
+                className="w-100 h-100 product-image"
+                src={data?.featuredAsset?.preview}
+                alt="Publication Image"
+              />
+            </Link>
           </div>
 
           <ul>
@@ -39,19 +45,17 @@ export default function ProductCard({ data }: any) {
 
         <div className="card-content">
           <span className="category">T-shirt</span>
-          <a href="#">
-            <h3>{data?.name}</h3>
-          </a>
-          <div className="rating">
+          <h3>{data?.name}</h3>
+          {/* <div className="rating">
             <Rating
               name="half-rating-read"
               defaultValue={2.5}
               precision={0.5}
               readOnly
             />
-          </div>
+          </div> */}
           <h4 className="price">
-            ${data?.price} <span>$299</span>
+            ${data.variants[0].price} <span>$299</span>
           </h4>
         </div>
 

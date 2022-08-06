@@ -1,0 +1,57 @@
+.price-filter {
+  font-family: "Trebuchet MS", sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin: 0;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px 20px;
+  height: 170px;
+  .range {
+    display: flex;
+    justify-content: space-between;
+  }
+  .label {
+    padding: 0 0 0 20px;
+    margin: 0 -20px 30px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    color: #111;
+    font-size: 17px;
+    border-bottom: 1px solid #eee;
+    span {
+      display: inline-block;
+    }
+  }
+  input {
+    width: 80px;
+    height: 30px;
+    border: 1px solid #c5cbd5;
+    margin: 5px 0 0 -1px;
+    outline: 0;
+    padding: 6px 0;
+    border-radius: 0;
+    font-size: 14px;
+    text-align: center;
+    float: right;
+  }
+}
+
+.filter-group {
+  .items {
+    padding: 10px 20px 10px;
+    margin-right: 0;
+    overflow: auto;
+    label {
+      line-height: 20px;
+      color: #111;
+    }
+  }
+}

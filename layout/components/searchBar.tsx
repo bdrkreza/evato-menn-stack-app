@@ -63,9 +63,9 @@ export default function SearchBar({}: Props) {
                 <div className="notification_menu">
                   <div className="btn-group">
                     <li className="nav-link nav_link top_icon">
-                      <Link href="" passHref>
+                      <a href="#">
                         <AiOutlineBell />
-                      </Link>
+                      </a>
                     </li>
                   </div>
                 </div>
@@ -74,9 +74,9 @@ export default function SearchBar({}: Props) {
                 <div>
                   <div className="btn-group">
                     <li className="nav-link nav_link top_icon">
-                      <Link href="" passHref>
+                      <a href="#">
                         <BsChatQuote />
-                      </Link>
+                      </a>
                     </li>
                   </div>
                 </div>

@@ -1,8 +1,14 @@
 .card-container {
   box-shadow: 1px 1px #888888;
-  border: 1px solid #f2eee2;
+  border: 2px solid #f2eee2;
   position: relative;
   overflow: hidden;
+  min-height: 450px;
+  max-height: 450px;
+  img {
+    max-height: 250px;
+    min-height: 250px;
+  }
   .add-to-cart {
     position: absolute;
     right: 0;
@@ -40,7 +46,8 @@
     margin: 0;
     text-align: center;
 
-    a {
+    .link {
+      cursor: pointer;
       background-color: #fafafa;
       display: block;
     }

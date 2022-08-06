@@ -23,6 +23,8 @@ a {
   --background: #f5f6f7;
   --white: #fff;
   --dark: rgb(0, 0, 0) 7;
+  --blue: #3749bb;
+  --light: #f2f4f8;
 }
 @import "./style.scss";
 @import "./mediaQuery.scss";
@@ -34,3 +36,5 @@ a {
 @import "./components/product-carousel.scss";
 @import "./components/navbar-nav.scss";
 @import "./components/product-details.scss";
+@import "./components/product-vertical-slider.scss";
+@import "./components/filter-panel.scss";

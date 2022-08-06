@@ -5,19 +5,18 @@ import {
   Button,
   Card,
   CardContent,
-  Container,
   Grid,
   Paper,
   Typography,
 } from "@mui/material";
-import ProductDetailsCarousel from "./product-details-carousel";
+import ProductVerticalSlider from "./product-vertical-slider";
 
 type Props = {};
 
 export default function ProductDetailsCard({}: Props) {
   return (
     <Paper>
-      <Container>
+      <div className="container">
         <Card
           sx={{
             borderRadius: 5,
@@ -33,10 +32,10 @@ export default function ProductDetailsCard({}: Props) {
           </CardContent>
         </Card>
         <Grid container spacing={5} columns={12}>
-          <Grid item md={5}>
-            <ProductDetailsCarousel />
+          <Grid item xs={12} md={5}>
+            <ProductVerticalSlider />
           </Grid>
-          <Grid item md={7}>
+          <Grid item xs={12} md={7}>
             <div className="product-content">
               <div className="product-name">
                 <h1> Logitech Signature M650 Wireless Mouses</h1>
@@ -134,7 +133,7 @@ export default function ProductDetailsCard({}: Props) {
             </div>
           </Grid>
         </Grid>
-      </Container>
+      </div>
     </Paper>
   );
 }

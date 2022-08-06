@@ -5,10 +5,13 @@ import { useEffect, useState } from "react";
 
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { ProductItem } from "../../contracts/product.type";
 import { data } from "../../pages/api/api";
 import ProductCard from "./prodeuct-card";
-
-export default function ProductCarousel() {
+type Props = {
+  products: Array<ProductItem> | undefined;
+};
+export default function ProductCarousel({ products }: Props) {
   const [item, setItem] = useState<any[] | null>([]);
 
   useEffect(() => {
@@ -38,13 +41,11 @@ export default function ProductCarousel() {
             },
           }}
         >
-          {item?.map((item) => {
+          {products?.map((item) => {
             return (
-              <div>
-                <SwiperSlide key={item.id} className="swiper">
-                  <ProductCard data={item} />
-                </SwiperSlide>
-              </div>
+              <SwiperSlide key={item.id} className="swiper">
+                <ProductCard data={item} />
+              </SwiperSlide>
             );
           })}
         </Swiper>
