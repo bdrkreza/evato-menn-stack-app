@@ -14,7 +14,6 @@ interface Props {
   products: Array<ProductItem>;
 }
 const Home = ({ products }: Props) => {
-  console.log(products);
   return (
     <div className={styles.container}>
       <Head>

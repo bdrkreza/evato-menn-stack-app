@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { BsHeartFill } from "react-icons/bs";
-import { FaSearch } from "react-icons/fa";
 import { FiRefreshCw } from "react-icons/fi";
+import QuickView from "../quick-view/quick-view";
 
 export default function ProductCard({ data }: any) {
   return (
@@ -35,10 +35,7 @@ export default function ProductCard({ data }: any) {
               </a>
             </li>
             <li>
-              <a href="#" title="Quick View">
-                <i className="fa fa-search"></i>
-                <FaSearch />
-              </a>
+              <QuickView data={data} />
             </li>
           </ul>
         </figure>

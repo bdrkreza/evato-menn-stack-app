@@ -18,7 +18,6 @@ interface Props {
 }
 
 export default function ProductDetails({ product }: Props) {
-  console.log(product);
   return (
     <div className="bg-light">
       <ProductDetailsCard />

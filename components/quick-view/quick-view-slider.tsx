@@ -26,7 +26,7 @@ const variants = {
     };
   },
 };
-export default function ProductDetailsCarousel({}: Props) {
+export default function QuickViewSlider({}: Props) {
   const [activeThumb, setActiveThumb] = useState<any>(null);
   return (
     <div>

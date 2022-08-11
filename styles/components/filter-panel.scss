@@ -4,11 +4,11 @@
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   font-size: 15px;
-  box-sizing: border-box;
   margin: 0;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-top: 1;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   display: inline-block;
   width: 100%;
   padding: 0 20px 20px;
@@ -54,4 +54,28 @@
       color: #111;
     }
   }
+}
+
+.custom-select {
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  label {
+    width: 100px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  select {
+    background-color: var(--light);
+  }
+}
+
+.custom-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
 }

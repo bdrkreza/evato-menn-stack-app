@@ -1,3 +1,4 @@
+import { Card } from "@mui/material";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import * as React from "react";
@@ -14,7 +15,7 @@ export default function PriceRange() {
   };
 
   return (
-    <div className="price-filter my-3">
+    <Card className="price-filter">
       <div className="label">
         <span>Price Range</span>
       </div>
@@ -35,6 +36,6 @@ export default function PriceRange() {
           <input type="text" id="range-to" name="from" />
         </label>
       </div>
-    </div>
+    </Card>
   );
 }
