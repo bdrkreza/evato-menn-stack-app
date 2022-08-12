@@ -27,6 +27,7 @@ a {
   --light: #f2f4f8;
 }
 @import "./style.scss";
+@import "./components/profile.scss";
 @import "./mediaQuery.scss";
 @import "./components/navbar.scss";
 @import "./components/footer.scss";

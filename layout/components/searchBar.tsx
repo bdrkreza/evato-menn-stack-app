@@ -83,9 +83,11 @@ export default function SearchBar({}: Props) {
 
                 {/* userProfile section */}
                 <li className="nav-ite">
-                  <a className="nav-link  nav_link top_icon d-block">
-                    <BsPerson />
-                  </a>
+                  <Link href={"/signin"} passHref>
+                    <a className="nav-link  nav_link top_icon d-block">
+                      <BsPerson />
+                    </a>
+                  </Link>
                 </li>
                 {/* <ShoppingCart /> */}
                 <li className="nav-ite">

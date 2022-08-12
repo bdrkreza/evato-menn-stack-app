@@ -12,6 +12,7 @@ import ProductCart from "./product-category/product-cart";
 import ProductDetailsCard from "./product-details/product-details-card";
 import ProductDetailsTabs from "./product-details/product-details-tabs";
 import ProductRelated from "./product-details/product-related";
+import Sidebar from "./profile/sidebar";
 
 export {
   HeroBanner,
@@ -27,4 +28,5 @@ export {
   FilterPanel,
   ProductCart,
   CategoryBar,
+  Sidebar,
 };
