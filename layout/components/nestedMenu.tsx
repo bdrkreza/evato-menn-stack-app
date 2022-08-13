@@ -4,7 +4,6 @@ type Props = {
   data: TCategory[] | undefined;
 };
 export default function NestedMenu({ data }: any) {
-  console.log("nested meun", data);
   const renderCategories = (categories: TCategory[]) => {
     let myCategories: any = [];
     categories.forEach((category: any) => {
