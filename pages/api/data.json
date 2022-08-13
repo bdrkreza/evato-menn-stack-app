@@ -1,0 +1,1445 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "category": "trending",
+      "slug": "laptop",
+      "description": "Now equipped with seventh-generation Intel Core processors, Laptop is snappier than ever. From daily tasks like launching apps and opening files to more advanced computing, you can power through your day thanks to faster SSDs and Turbo Boost processing up to 3.6GHz.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1200,
+        "preview": "https://demo.vendure.io/assets/preview/71/derick-david-409858-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "L2201308",
+          "name": "Laptop 13 inch 8GB",
+          "productId": "1",
+          "price": 129900
+        },
+        {
+          "sku": "L2201508",
+          "name": "Laptop 15 inch 8GB",
+          "productId": "1",
+          "price": 139900
+        },
+        {
+          "sku": "L2201316",
+          "name": "Laptop 13 inch 16GB",
+          "productId": "1",
+          "price": 219900
+        },
+        {
+          "sku": "L2201516",
+          "name": "Laptop 15 inch 16GB",
+          "productId": "1",
+          "price": 229900
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "2",
+      "name": "Tablet",
+      "slug": "tablet",
+      "category": "trending",
+      "description": "If the computer were invented today, what would it look like? It would be powerful enough for any task. So mobile you could take it everywhere. And so intuitive you could use it any way you wanted — with touch, a keyboard, or even a pencil. In other words, it wouldn’t really be a \"computer.\" It would be Tablet.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/b8/kelly-sikkema-685291-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "TBL200032",
+          "name": "Tablet 32GB",
+          "productId": "2",
+          "price": 32900
+        },
+        {
+          "sku": "TBL200128",
+          "name": "Tablet 128GB",
+          "productId": "2",
+          "price": 44500
+        }
+      ],
+      "variantList": {
+        "totalItems": 2
+      }
+    },
+    {
+      "id": "3",
+      "name": "Wireless Optical Mouse",
+      "slug": "cordless-mouse",
+      "category": "trending",
+      "description": "The Logitech M185 Wireless Optical Mouse is a great device for any computer user, and as Logitech are the global market leaders for these devices, you are also guaranteed absolute reliability. A mouse to be reckoned with!",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1071,
+        "preview": "https://demo.vendure.io/assets/preview/a1/oscar-ivan-esquivel-arteaga-687447-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "834444",
+          "name": "Wireless Optical Mouse",
+          "productId": "3",
+          "price": 1899
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "4",
+      "name": "32-Inch Monitor",
+      "slug": "32-inch-monitor",
+      "category": "trending",
+      "description": "The UJ59 with Ultra HD resolution has 4x the pixels of Full HD, delivering more screen space and amazingly life-like images. That means you can view documents and webpages with less scrolling, work more comfortably with multiple windows and toolbars, and enjoy photos, videos and games in stunning 4K quality. Note: beverage not included.",
+      "featuredAsset": {
+        "width": 1280,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/d2/daniel-korpai-1302051-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "LU32J590UQUXEN",
+          "name": "32-Inch Monitor",
+          "productId": "4",
+          "price": 31000
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "5",
+      "name": "Curvy Monitor",
+      "slug": "curvy-monitor",
+      "category": "trending",
+      "description": "Discover a truly immersive viewing experience with this monitor curved more deeply than any other. Wrapping around your field of vision the 1,800 R screencreates a wider field of view, enhances depth perception, and minimises peripheral distractions to draw you deeper in to your content.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/9c/alexandru-acea-686569-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "C24F390",
+          "name": "Curvy Monitor 24 inch",
+          "productId": "5",
+          "price": 14374
+        },
+        {
+          "sku": "C27F390",
+          "name": "Curvy Monitor 27 inch",
+          "productId": "5",
+          "price": 16994
+        }
+      ],
+      "variantList": {
+        "totalItems": 2
+      }
+    },
+    {
+      "id": "6",
+      "name": "High Performance RAM",
+      "slug": "high-performance-ram",
+      "category": "trending",
+      "description": "Each RAM module is built with a pure aluminium heat spreader for faster heat dissipation and cooler operation. Enhanced to XMP 2.0 profiles for better overclocking; Compatibility: Intel 100 Series, Intel 200 Series, Intel 300 Series, Intel X299, AMD 300 Series, AMD 400 Series.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/58/liam-briese-1128307-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "CMK32GX4M2AC04",
+          "name": "High Performance RAM 4GB",
+          "productId": "6",
+          "price": 13785
+        },
+        {
+          "sku": "CMK32GX4M2AC08",
+          "name": "High Performance RAM 8GB",
+          "productId": "6",
+          "price": 14639
+        },
+        {
+          "sku": "CMK32GX4M2AC16",
+          "name": "High Performance RAM 16GB",
+          "productId": "6",
+          "price": 28181
+        }
+      ],
+      "variantList": {
+        "totalItems": 3
+      }
+    },
+    {
+      "id": "7",
+      "name": "Gaming PC",
+      "slug": "gaming-pc",
+      "category": "trending",
+      "description": "This pc is optimised for gaming, and is also VR ready. The Intel Core-i7 CPU and High Performance GPU give the computer the raw power it needs to function at a high level.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/5a/florian-olivo-1166419-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "CGS480VR1063",
+          "name": "Gaming PC i7-8700 240GB SSD",
+          "productId": "7",
+          "price": 108720
+        },
+        {
+          "sku": "CGS480VR1064",
+          "name": "Gaming PC R7-2700 240GB SSD",
+          "productId": "7",
+          "price": 109995
+        },
+        {
+          "sku": "CGS480VR1065",
+          "name": "Gaming PC i7-8700 120GB SSD",
+          "productId": "7",
+          "price": 93120
+        },
+        {
+          "sku": "CGS480VR1066",
+          "name": "Gaming PC R7-2700 120GB SSD",
+          "productId": "7",
+          "price": 94920
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "8",
+      "name": "Hard Drive",
+      "slug": "hard-drive",
+      "category": "trending",
+      "description": "Boost your PC storage with this internal hard drive, designed just for desktop and all-in-one PCs.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1200,
+        "preview": "https://demo.vendure.io/assets/preview/96/vincent-botta-736919-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "IHD455T1",
+          "name": "Hard Drive 1TB",
+          "productId": "8",
+          "price": 3799
+        },
+        {
+          "sku": "IHD455T2",
+          "name": "Hard Drive 2TB",
+          "productId": "8",
+          "price": 5374
+        },
+        {
+          "sku": "IHD455T3",
+          "name": "Hard Drive 3TB",
+          "productId": "8",
+          "price": 7896
+        },
+        {
+          "sku": "IHD455T4",
+          "name": "Hard Drive 4TB",
+          "productId": "8",
+          "price": 9299
+        },
+        {
+          "sku": "IHD455T6",
+          "name": "Hard Drive 6TB",
+          "productId": "8",
+          "price": 13435
+        }
+      ],
+      "variantList": {
+        "totalItems": 5
+      }
+    },
+    {
+      "id": "9",
+      "name": "Clacky Keyboard",
+      "slug": "clacky-keyboard",
+      "category": "trending",
+      "description": "Let all your colleagues know that you are typing on this exclusive, colorful klicky-klacky keyboard. Huge travel on each keypress ensures maximum klack on each and every keystroke.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1060,
+        "preview": "https://demo.vendure.io/assets/preview/09/juan-gomez-674574-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "A4TKLA45535",
+          "name": "Clacky Keyboard",
+          "productId": "9",
+          "price": 7489
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "10",
+      "name": "Ethernet Cable",
+      "slug": "ethernet-cable",
+      "category": "trending",
+      "description": "5m (metres) Cat.6 network cable (upwards/downwards compatible) | Patch cable | 2 RJ-45 plug | plug with bend protection mantle. High transmission speeds due to operating frequency with up to 250 MHz (in comparison to Cat.5/Cat.5e cable bandwidth of 100 MHz).",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/7b/thomas-q-1229169-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "A23334x30",
+          "name": "Ethernet Cable",
+          "productId": "10",
+          "price": 597
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "11",
+      "name": "USB Cable",
+      "slug": "usb-cable",
+      "category": "trending",
+      "description": "Solid conductors eliminate strand-interaction distortion and reduce jitter. As the surface is made of high-purity silver, the performance is very close to that of a solid silver cable, but priced much closer to solid copper cable.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/64/adam-birkett-239153-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "USBCIN01.5MI",
+          "name": "USB Cable",
+          "productId": "11",
+          "price": 6900
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "12",
+      "name": "Instant Camera",
+      "slug": "instant-camera",
+      "category": "trending",
+      "description": "With its nostalgic design and simple point-and-shoot functionality, the Instant Camera is the perfect pick to get started with instant photography.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/b5/eniko-kis-663725-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "IC22MWDD",
+          "name": "Instant Camera",
+          "productId": "12",
+          "price": 17499
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "13",
+      "name": "Camera Lens",
+      "slug": "camera-lens",
+      "category": "featured",
+      "description": "This lens is a Di type lens using an optical system with improved multi-coating designed to function with digital SLR cameras as well as film cameras.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1110,
+        "preview": "https://demo.vendure.io/assets/preview/9b/brandi-redd-104140-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B0012UUP02",
+          "name": "Camera Lens",
+          "productId": "13",
+          "price": 10400
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "14",
+      "name": "Vintage Folding Camera",
+      "slug": "vintage-folding-camera",
+      "category": "featured",
+      "description": "This vintage folding camera is so antiquated that you cannot possibly hope to produce actual photographs with it. However, it makes a wonderful decorative piece for the home or office.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/3c/jonathan-talbert-697262-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B00AFC9099",
+          "name": "Vintage Folding Camera",
+          "productId": "14",
+          "price": 535000
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "15",
+      "name": "Tripod",
+      "slug": "tripod",
+      "category": "featured",
+      "description": "Capture vivid, professional-style photographs with help from this lightweight tripod. The adjustable-height tripod makes it easy to achieve reliable stability and score just the right angle when going after that award-winning shot.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/21/zoltan-tasi-423051-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B00XI87KV8",
+          "name": "Tripod",
+          "productId": "15",
+          "price": 1498
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "16",
+      "name": "Instamatic Camera",
+      "slug": "instamatic-camera",
+      "category": "featured",
+      "description": "This inexpensive point-and-shoot camera uses easy-to-load 126 film cartridges. A built-in flash unit ensure great results, no matter the lighting conditions.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/5b/jakob-owens-274337-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B07K1330LL",
+          "name": "Instamatic Camera",
+          "productId": "16",
+          "price": 2000
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "17",
+      "name": "Compact Digital Camera",
+      "slug": "compact-digital-camera",
+      "category": "featured",
+      "description": "Unleash your creative potential with high-level performance and advanced features such as AI-powered Real-time Eye AF; new, high-precision Real-time Tracking; high-speed continuous shooting and 4K HDR movie-shooting. The camera's innovative AF quickly and reliably detects the position of the subject and then tracks the subject's motion, keeping it in sharp focus.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/bc/patrick-brinksma-663044-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B07D990021",
+          "name": "Compact Digital Camera",
+          "productId": "17",
+          "price": 89999
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "18",
+      "name": "Nikkormat SLR Camera",
+      "slug": "nikkormat-slr-camera",
+      "category": "featured",
+      "description": "The Nikkormat FS was brought to market by Nikon in 1965. The lens is a 50mm f1.4 Nikkor. Nice glass, smooth focus and a working diaphragm. A UV filter and a Nikon front lens cap are included with the lens.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1068,
+        "preview": "https://demo.vendure.io/assets/preview/95/chuttersnap-324234-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B07D33B334",
+          "name": "Nikkormat SLR Camera",
+          "productId": "18",
+          "price": 61500
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "19",
+      "name": "Compact SLR Camera",
+      "slug": "compact-slr-camera",
+      "category": "featured",
+      "description": "Retro styled, portable in size and built around a powerful 24-megapixel APS-C CMOS sensor, this digital camera is the ideal companion for creative everyday photography. Packed full of high spec features such as an advanced hybrid autofocus system able to keep pace with even the most active subjects, a speedy 6fps continuous-shooting mode, high-resolution electronic viewfinder and intuitive swivelling touchscreen, it brings professional image making into everyone’s grasp.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/9d/robert-shunev-528016-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B07D75V44S",
+          "name": "Compact SLR Camera",
+          "productId": "19",
+          "price": 52100
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "20",
+      "name": "Twin Lens Camera",
+      "slug": "twin-lens-camera",
+      "category": "featured",
+      "description": "What makes a Rolleiflex TLR so special? Many things. To start, TLR stands for twin lens reflex. “Twin” because there are two lenses. And reflex means that the photographer looks through the lens to view the reflected image of an object or scene on the focusing screen. ",
+      "featuredAsset": {
+        "width": 1050,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/ef/alexander-andrews-260988-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B07D78JTLR",
+          "name": "Twin Lens Camera",
+          "productId": "20",
+          "price": 79900
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "21",
+      "name": "Road Bike",
+      "slug": "road-bike",
+      "category": "featured",
+      "description": "Featuring a full carbon chassis - complete with cyclocross-specific carbon fork - and a component setup geared for hard use on the race circuit, it's got the low weight, exceptional efficiency and brilliant handling you'll need to stay at the front of the pack.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1130,
+        "preview": "https://demo.vendure.io/assets/preview/2f/mikkel-bech-748940-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "RB000844334",
+          "name": "Road Bike",
+          "productId": "21",
+          "price": 249900
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "22",
+      "name": "Skipping Rope",
+      "slug": "skipping-rope",
+      "category": "featured",
+      "description": "When you're working out you need a quality rope that doesn't tangle at every couple of jumps and with this skipping rope you won't have this problem. The fact that it looks like a pair of tasty frankfurters is merely a bonus.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/34/stoica-ionela-530966-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B07CNGXVXT",
+          "name": "Skipping Rope",
+          "productId": "22",
+          "price": 799
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "23",
+      "name": "Boxing Gloves",
+      "slug": "boxing-gloves",
+      "category": "featured",
+      "description": "Training gloves designed for optimum training. Our gloves promote proper punching technique because they are conformed to the natural shape of your fist. Dense, innovative two-layer foam provides better shock absorbency and full padding on the front, back and wrist to promote proper punching technique.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1332,
+        "preview": "https://demo.vendure.io/assets/preview/4f/neonbrand-428982-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B000ZYLPPU",
+          "name": "Boxing Gloves",
+          "productId": "23",
+          "price": 3304
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "24",
+      "name": "Tent",
+      "slug": "tent",
+      "category": "featured",
+      "description": "With tons of space inside (for max. 4 persons), full head height throughout the entire tent and an unusual and striking shape, this tent offers you everything you need.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/96/michael-guite-571169-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "2000023510",
+          "name": "Tent",
+          "productId": "24",
+          "price": 21493
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "25",
+      "name": "Cruiser Skateboard",
+      "slug": "cruiser-skateboard",
+      "category": "featured",
+      "description": "Based on the 1970s iconic shape, but made to a larger 69cm size, with updated, quality component, these skateboards are great for beginners to learn the foot spacing required, and are perfect for all-day cruising.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1280,
+        "preview": "https://demo.vendure.io/assets/preview/35/max-tarkhov-737999-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "799872520",
+          "name": "Cruiser Skateboard",
+          "productId": "25",
+          "price": 2499
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "26",
+      "name": "Football",
+      "slug": "football",
+      "category": "featured",
+      "description": "This football features high-contrast graphics for high-visibility during play, while its machine-stitched tpu casing offers consistent performance.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1020,
+        "preview": "https://demo.vendure.io/assets/preview/d6/nik-shuliahin-619349-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "SC3137-056",
+          "name": "Football",
+          "productId": "26",
+          "price": 5707
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "27",
+      "name": "Tennis Ball",
+      "slug": "tennis-ball",
+      "category": "gaming",
+      "description": "Our dog loves these tennis balls and they last for some time before they eventually either get lost in some field or bush or the covering comes off due to it being used most of the day every day.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1070,
+        "preview": "https://demo.vendure.io/assets/preview/30/ben-hershey-574483-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "WRT11752P",
+          "name": "Tennis Ball",
+          "productId": "27",
+          "price": 1273
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "28",
+      "name": "Basketball",
+      "slug": "basketball",
+      "category": "gaming",
+      "description": "The Wilson MVP ball is perfect for playing basketball, and improving your skill for hours on end. Designed for new players, it is created with a high-quality rubber suitable for courts, allowing you to get full use during your practices.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/0f/tommy-bebo-600358-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "WTB1418XB06",
+          "name": "Basketball",
+          "productId": "28",
+          "price": 3562
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "29",
+      "name": "Ultraboost Running Shoe",
+      "slug": "ultraboost-running-shoe",
+      "category": "gaming",
+      "description": "With its ultra-light, uber-responsive magic foam and a carbon fiber plate that feels like it’s propelling you forward, the Running Shoe is ready to push you to victories both large and small",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1068,
+        "preview": "https://demo.vendure.io/assets/preview/ed/chuttersnap-584518-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "RS0040",
+          "name": "Ultraboost Running Shoe Size 40",
+          "productId": "29",
+          "price": 9999
+        },
+        {
+          "sku": "RS0042",
+          "name": "Ultraboost Running Shoe Size 42",
+          "productId": "29",
+          "price": 9999
+        },
+        {
+          "sku": "RS0044",
+          "name": "Ultraboost Running Shoe Size 44",
+          "productId": "29",
+          "price": 9999
+        },
+        {
+          "sku": "RS0046",
+          "name": "Ultraboost Running Shoe Size 46",
+          "productId": "29",
+          "price": 9999
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "30",
+      "name": "Freerun Running Shoe",
+      "slug": "freerun-running-shoe",
+      "category": "gaming",
+      "description": "The Freerun Men's Running Shoe is built for record-breaking speed. The Flyknit upper delivers ultra-lightweight support that fits like a glove.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/0f/imani-clovis-234736-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "AR4561-40",
+          "name": "Freerun Running Shoe Size 40",
+          "productId": "30",
+          "price": 16000
+        },
+        {
+          "sku": "AR4561-42",
+          "name": "Freerun Running Shoe Size 42",
+          "productId": "30",
+          "price": 16000
+        },
+        {
+          "sku": "AR4561-44",
+          "name": "Freerun Running Shoe Size 44",
+          "productId": "30",
+          "price": 16000
+        },
+        {
+          "sku": "AR4561-46",
+          "name": "Freerun Running Shoe Size 46",
+          "productId": "30",
+          "price": 16000
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "31",
+      "name": "Hi-Top Basketball Shoe",
+      "slug": "hi-top-basketball-shoe",
+      "category": "gaming",
+      "description": "Boasting legendary performance since 2008, the Hyperdunkz Basketball Shoe needs no gimmicks to stand out. Air units deliver best-in-class cushioning, while a dynamic lacing system keeps your foot snug and secure, so you can focus on your game and nothing else.",
+      "featuredAsset": {
+        "width": 1200,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/3c/xavier-teo-469050-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "AO7893-40",
+          "name": "Hi-Top Basketball Shoe Size 40",
+          "productId": "31",
+          "price": 14000
+        },
+        {
+          "sku": "AO7893-42",
+          "name": "Hi-Top Basketball Shoe Size 42",
+          "productId": "31",
+          "price": 14000
+        },
+        {
+          "sku": "AO7893-44",
+          "name": "Hi-Top Basketball Shoe Size 44",
+          "productId": "31",
+          "price": 14000
+        },
+        {
+          "sku": "AO7893-46",
+          "name": "Hi-Top Basketball Shoe Size 46",
+          "productId": "31",
+          "price": 14000
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "32",
+      "name": "Pureboost Running Shoe",
+      "slug": "pureboost-running-shoe",
+      "category": "gaming",
+      "description": "Built to handle curbs, corners and uneven sidewalks, these natural running shoes have an expanded landing zone and a heel plate for added stability. A lightweight and stretchy knit upper supports your native stride.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1223,
+        "preview": "https://demo.vendure.io/assets/preview/a2/thomas-serer-420833-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "F3578640",
+          "name": "Pureboost Running Shoe Size 40",
+          "productId": "32",
+          "price": 9995
+        },
+        {
+          "sku": "F3578642",
+          "name": "Pureboost Running Shoe Size 42",
+          "productId": "32",
+          "price": 9995
+        },
+        {
+          "sku": "F3578644",
+          "name": "Pureboost Running Shoe Size 44",
+          "productId": "32",
+          "price": 9995
+        },
+        {
+          "sku": "F3578646",
+          "name": "Pureboost Running Shoe Size 46",
+          "productId": "32",
+          "price": 9995
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "33",
+      "name": "RunX Running Shoe",
+      "slug": "runx-running-shoe",
+      "category": "gaming",
+      "description": "These running shoes are made with an airy, lightweight mesh upper. The durable rubber outsole grips the pavement for added stability. A cushioned midsole brings comfort to each step.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/00/nikolai-chernichenko-1299748-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "F3633340",
+          "name": "RunX Running Shoe Size 40",
+          "productId": "33",
+          "price": 4495
+        },
+        {
+          "sku": "F3633342",
+          "name": "RunX Running Shoe Size 42",
+          "productId": "33",
+          "price": 4495
+        },
+        {
+          "sku": "F3633344",
+          "name": "RunX Running Shoe Size 44",
+          "productId": "33",
+          "price": 4495
+        },
+        {
+          "sku": "F3633346",
+          "name": "RunX Running Shoe Size 46",
+          "productId": "33",
+          "price": 4495
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "34",
+      "name": "Allstar Sneakers",
+      "slug": "allstar-sneakers",
+      "category": "gaming",
+      "description": "All Star is the most iconic sneaker in the world, recognised for its unmistakable silhouette, star-centred ankle patch and cultural authenticity. And like the best paradigms, it only gets better with time.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/aa/mitch-lensink-256007-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "CAS23340",
+          "name": "Allstar Sneakers Size 40",
+          "productId": "34",
+          "price": 6500
+        },
+        {
+          "sku": "CAS23342",
+          "name": "Allstar Sneakers Size 42",
+          "productId": "34",
+          "price": 6500
+        },
+        {
+          "sku": "CAS23344",
+          "name": "Allstar Sneakers Size 44",
+          "productId": "34",
+          "price": 6500
+        },
+        {
+          "sku": "CAS23346",
+          "name": "Allstar Sneakers Size 46",
+          "productId": "34",
+          "price": 6500
+        }
+      ],
+      "variantList": {
+        "totalItems": 4
+      }
+    },
+    {
+      "id": "35",
+      "name": "Spiky Cactus",
+      "slug": "spiky-cactus",
+      "category": "gaming",
+      "description": "A spiky yet elegant house cactus - perfect for the home or office. Origin and habitat: Probably native only to the Andes of Peru",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/78/charles-deluvio-695736-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "SC011001",
+          "name": "Spiky Cactus",
+          "productId": "35",
+          "price": 1550
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "36",
+      "name": "Tulip Pot",
+      "slug": "tulip-pot",
+      "category": "gaming",
+      "description": "Bright crimson red species tulip with black centers, the poppy-like flowers will open up in full sun. Ideal for rock gardens, pots and border edging.",
+      "featuredAsset": {
+        "width": 900,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/14/natalia-y-345738-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "A58477",
+          "name": "Tulip Pot",
+          "productId": "36",
+          "price": 675
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "37",
+      "name": "Hanging Plant",
+      "slug": "hanging-plant",
+      "category": "upcoming",
+      "description": "Can be found in tropical and sub-tropical America where it grows on the branches of trees, but also on telephone wires and electricity cables and poles that sometimes topple with the weight of these plants. This plant loves a moist and warm air.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/5b/alex-rodriguez-santibanez-200278-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "A44223",
+          "name": "Hanging Plant",
+          "productId": "37",
+          "price": 1995
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "38",
+      "name": "Aloe Vera",
+      "slug": "aloe-vera",
+      "category": "upcoming",
+      "description": "Decorative Aloe vera makes a lovely house plant. A really trendy plant, Aloe vera is just so easy to care for. Aloe vera sap has been renowned for its remarkable medicinal and cosmetic properties for many centuries and has been used to treat grazes, insect bites and sunburn - it really works.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1063,
+        "preview": "https://demo.vendure.io/assets/preview/29/silvia-agrasar-227575-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "A44352",
+          "name": "Aloe Vera",
+          "productId": "38",
+          "price": 699
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "39",
+      "name": "Fern Blechnum Gibbum",
+      "slug": "fern-blechnum-gibbum",
+      "category": "upcoming",
+      "description": "Create a tropical feel in your home with this lush green tree fern, it has decorative leaves and will develop a short slender trunk in time.",
+      "featuredAsset": {
+        "width": 1200,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/6d/caleb-george-536388-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "A04851",
+          "name": "Fern Blechnum Gibbum",
+          "productId": "39",
+          "price": 895
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "40",
+      "name": "Assorted Indoor Succulents",
+      "slug": "assorted-succulents",
+      "category": "upcoming",
+      "description": "These assorted succulents come in a variety of different shapes and colours - each with their own unique personality. Succulents grow best in plenty of light: a sunny windowsill would be the ideal spot for them to thrive!",
+      "featuredAsset": {
+        "width": 1115,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/81/annie-spratt-78044-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "A08593",
+          "name": "Assorted Indoor Succulents",
+          "productId": "40",
+          "price": 3250
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "41",
+      "name": "Orchid",
+      "slug": "orchid",
+      "category": "upcoming",
+      "description": "Gloriously elegant. It can go along with any interior as it is a neutral color and the most popular Phalaenopsis overall. 2 to 3 foot stems host large white flowers that can last for over 2 months.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/88/zoltan-kovacs-642412-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "ROR00221",
+          "name": "Orchid",
+          "productId": "41",
+          "price": 6500
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "42",
+      "name": "Bonsai Tree",
+      "slug": "bonsai-tree",
+      "category": "upcoming",
+      "description": "Excellent semi-evergreen bonsai. Indoors or out but needs some winter protection. All trees sent will leave the nursery in excellent condition and will be of equal quality or better than the photograph shown.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1200,
+        "preview": "https://demo.vendure.io/assets/preview/f3/mark-tegethoff-667351-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B01MXFLUSV",
+          "name": "Bonsai Tree",
+          "productId": "42",
+          "price": 1999
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "43",
+      "name": "Guardian Lion Statue",
+      "slug": "guardian-lion-statue",
+      "category": "upcoming",
+      "description": "Placing it at home or office can bring you fortune and prosperity, guard your house and ward off ill fortune.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/44/vincent-liu-525429-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "GL34LLW11",
+          "name": "Guardian Lion Statue",
+          "productId": "43",
+          "price": 18853
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "44",
+      "name": "Hand Trowel",
+      "slug": "hand-trowel",
+      "category": "upcoming",
+      "description": "Hand trowel for garden cultivating hammer finish epoxy-coated head for improved resistance to rust, scratches, humidity and alkalines in the soil.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/7d/neslihan-gunaydin-3493-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "4058NB/09",
+          "name": "Hand Trowel",
+          "productId": "44",
+          "price": 499
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "45",
+      "name": "Balloon Chair",
+      "slug": "balloon-chair",
+      "category": "upcoming",
+      "description": "A charming vintage white wooden chair featuring an extremely spherical pink balloon. The balloon may be detached and used for other purposes, for example as a party decoration.",
+      "featuredAsset": {
+        "width": 800,
+        "height": 1200,
+        "preview": "https://demo.vendure.io/assets/preview/ef/florian-klauer-14840-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "34-BC82444",
+          "name": "Balloon Chair",
+          "productId": "45",
+          "price": 6500
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "46",
+      "name": "Grey Fabric Sofa",
+      "slug": "grey-fabric-sofa",
+      "category": "upcoming",
+      "description": "Seat cushions filled with high resilience foam and polyester fibre wadding give comfortable support for your body, and easily regain their shape when you get up. The cover is easy to keep clean as it is removable and can be machine washed.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/69/nathan-fertig-249917-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "CH00001-12",
+          "name": "Grey Fabric Sofa",
+          "productId": "46",
+          "price": 29500
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "47",
+      "name": "Leather Sofa",
+      "slug": "leather-sofa",
+      "category": "upcoming",
+      "description": "This premium, tan-brown bonded leather seat is part of the 'chill' sofa range. The lever activated recline feature makes it easy to adjust to any position. This smart, bustle back design with rounded tight padded arms has been designed with your comfort in mind. This well-padded chair has foam pocket sprung seat cushions and fibre-filled back cushions.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/3e/paul-weaver-1120584-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "CH00001-02",
+          "name": "Leather Sofa",
+          "productId": "47",
+          "price": 124500
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "48",
+      "name": "Light Shade",
+      "slug": "light-shade",
+      "category": "upcoming",
+      "description": "Modern tapered white polycotton pendant shade with a metallic silver chrome interior finish for maximum light reflection. Reversible gimble so it can be used as a ceiling shade or as a lamp shade.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/5f/pierre-chatel-innocenti-483198-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "B45809LSW",
+          "name": "Light Shade",
+          "productId": "48",
+          "price": 2845
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "49",
+      "name": "Wooden Side Desk",
+      "slug": "wooden-side-desk",
+      "category": "upcoming",
+      "description": "Drawer stops prevent the drawers from being pulled out too far. Built-in cable management for collecting cables and cords; out of sight but close at hand.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1067,
+        "preview": "https://demo.vendure.io/assets/preview/40/abel-y-costa-716024-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "304.096.29",
+          "name": "Wooden Side Desk",
+          "productId": "49",
+          "price": 12500
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "50",
+      "name": "Comfy Padded Chair",
+      "slug": "comfy-padded-chair",
+      "description": "You sit comfortably thanks to the shaped back. The chair frame is made of solid wood, which is a durable natural material.",
+      "featuredAsset": {
+        "width": 1048,
+        "height": 1500,
+        "preview": "https://demo.vendure.io/assets/preview/3b/kari-shea-398668-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "404.068.14",
+          "name": "Comfy Padded Chair",
+          "productId": "50",
+          "price": 13000
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "51",
+      "name": "Black Eaves Chair",
+      "slug": "black-eaves-chair",
+      "description": "Comfortable to sit on thanks to the bowl-shaped seat and rounded shape of the backrest. No tools are required to assemble the chair, you just click it together with a simple mechanism under the seat.",
+      "featuredAsset": {
+        "width": 1600,
+        "height": 1104,
+        "preview": "https://demo.vendure.io/assets/preview/09/andres-jasso-220776-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "003.600.02",
+          "name": "Black Eaves Chair",
+          "productId": "51",
+          "price": 7000
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "52",
+      "name": "Wooden Stool",
+      "slug": "wooden-stool",
+      "description": "Solid wood is a hardwearing natural material, which can be sanded and surface treated as required.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/d0/ruslan-bardash-351288-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "202.493.30",
+          "name": "Wooden Stool",
+          "productId": "52",
+          "price": 1400
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "53",
+      "name": "Bedside Table",
+      "slug": "bedside-table",
+      "description": "Every table is unique, with varying grain pattern and natural colour shifts that are part of the charm of wood.",
+      "featuredAsset": {
+        "width": 1200,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/72/benjamin-voros-310026-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "404.290.14",
+          "name": "Bedside Table",
+          "productId": "53",
+          "price": 13000
+        }
+      ],
+      "variantList": {
+        "totalItems": 1
+      }
+    },
+    {
+      "id": "54",
+      "name": "Modern Cafe Chair",
+      "slug": "modern-cafe-chair",
+      "description": "You sit comfortably thanks to the restful flexibility of the seat. Lightweight and easy to move around, yet stable enough even for the liveliest, young family members.",
+      "featuredAsset": {
+        "width": 1067,
+        "height": 1600,
+        "preview": "https://demo.vendure.io/assets/preview/b1/jean-philippe-delberghe-1400011-unsplash__preview.jpg"
+      },
+      "variants": [
+        {
+          "sku": "404.038.96",
+          "name": "Modern Cafe Chair mustard",
+          "productId": "54",
+          "price": 10000
+        },
+        {
+          "sku": "404.038.96",
+          "name": "Modern Cafe Chair mint",
+          "productId": "54",
+          "price": 10000
+        },
+        {
+          "sku": "404.038.96",
+          "name": "Modern Cafe Chair pearl",
+          "productId": "54",
+          "price": 10000
+        }
+      ],
+      "variantList": {
+        "totalItems": 3
+      }
+    }
+  ]
+}

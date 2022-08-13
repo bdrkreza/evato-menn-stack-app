@@ -1,15 +1,16 @@
-import ScrollTop from "./components/scrollTop";
+import { useGetCategoryQuery } from "../redux/productApi";
+import NavbarNav from "./components/navbar-nav";
 import SearchBar from "./components/searchBar";
 import TopBar from "./components/topbar";
 
-type Props = {};
+export default function Navbar() {
+  const { data, error, isLoading } = useGetCategoryQuery();
 
-export default function Navbar({}: Props) {
   return (
     <div>
       <TopBar />
       <SearchBar />
-      <ScrollTop />
+      <NavbarNav data={data} />
     </div>
   );
 }

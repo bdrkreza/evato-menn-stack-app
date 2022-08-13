@@ -14,7 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
-
+*,
 :root {
   --border-color: #e0e0e0;
   --primary: #c9151b;
@@ -23,10 +23,20 @@ a {
   --background: #f5f6f7;
   --white: #fff;
   --dark: rgb(0, 0, 0) 7;
+  --blue: #3749bb;
+  --light: #f2f4f8;
 }
 @import "./style.scss";
+@import "./components/profile.scss";
+@import "./mediaQuery.scss";
 @import "./components/navbar.scss";
+@import "./components/footer.scss";
 @import "./components/banner.scss";
 @import "./components/trending.scss";
 @import "./components/product-card.scss";
 @import "./components/product-carousel.scss";
+@import "./components/navbar-nav.scss";
+@import "./components/product-details.scss";
+@import "./components/product-vertical-slider.scss";
+@import "./components/filter-panel.scss";
+@import "./components/nestedMenu.scss";

@@ -1,21 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
-import { Rating } from "@mui/material";
+import Link from "next/link";
 import { BsHeartFill } from "react-icons/bs";
-import { FaSearch } from "react-icons/fa";
 import { FiRefreshCw } from "react-icons/fi";
+import QuickView from "../quick-view/quick-view";
 
 export default function ProductCard({ data }: any) {
   return (
     <>
       <div className="card-container">
         <figure>
-          <a href="#">
-            <img
-              className="w-100 h-100"
-              src={data?.img}
-              alt="Publication Image"
-            />
-          </a>
+          <div className="link">
+            <Link
+              href={`/product/[data.id]`}
+              as={`/product/${data.id}`}
+              passHref
+            >
+              <img
+                className="w-100 h-100 product-image"
+                src={data?.featuredAsset?.preview}
+                alt="Publication Image"
+              />
+            </Link>
+          </div>
 
           <ul>
             <li>
@@ -29,29 +35,24 @@ export default function ProductCard({ data }: any) {
               </a>
             </li>
             <li>
-              <a href="#" title="Quick View">
-                <i className="fa fa-search"></i>
-                <FaSearch />
-              </a>
+              <QuickView data={data} />
             </li>
           </ul>
         </figure>
 
         <div className="card-content">
           <span className="category">T-shirt</span>
-          <h3>
-            <a href="#">{data?.name}</a>
-          </h3>
-          <div className="rating">
+          <h3>{data?.name}</h3>
+          {/* <div className="rating">
             <Rating
               name="half-rating-read"
               defaultValue={2.5}
               precision={0.5}
               readOnly
             />
-          </div>
+          </div> */}
           <h4 className="price">
-            ${data?.price} <span>$299</span>
+            ${data.variants[0].price} <span>$299</span>
           </h4>
         </div>
 

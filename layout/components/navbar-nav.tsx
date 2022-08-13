@@ -1,11 +1,14 @@
 import { AppBar, Button } from "@mui/material";
 import { Fragment, useEffect, useState } from "react";
 import { FaList } from "react-icons/fa";
-import { FiChevronDown } from "react-icons/fi";
-import CategoryDropdown from "./categoryDropdown";
-type Props = {};
+import { TiArrowSortedDown } from "react-icons/ti";
+import { ICategory } from "../../contracts/category.type";
+import NestedMenu from "./nestedMenu";
+type Props = {
+  data: ICategory | undefined;
+};
 
-export default function ScrollTop({}: Props) {
+export default function Navbar_nav({ data }: Props) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,28 +31,24 @@ export default function ScrollTop({}: Props) {
             : "navbar navbar-expand-md navbar-2"
         }
       >
-        <div className="container">
-          <ul className="navbar-nav navbar-nav-1">
-            <div className="dropdown dropdown-box">
-              <li className="nav-item">
-                <div
-                  className="nav-link dropdown-toggle"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <FaList />
-                  <span>Catagories</span>
-                  <FiChevronDown />
-                </div>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <CategoryDropdown />
-                </div>
-              </li>
+        <div className="container nav-container">
+          <div className="nested-dropdown">
+            <div className="dropdown">
+              <div
+                className="nested-btn dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+              >
+                <FaList />
+                <span>Catagories</span>
+                <TiArrowSortedDown />
+              </div>
+              <NestedMenu data={data} />
             </div>
-          </ul>
+          </div>
+
           <ul className="navbar-nav mr-auto pl-5">
             {nav.map(({ label }, index) => (
               <div className="dropdown ml-4" key={index}>

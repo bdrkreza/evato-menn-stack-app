@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "manufacturer": "ryzen for chaina",
+      "brand": "Razer",
+      "title": "Razer Book 13 Core i7 11th Gen 512GB SSD 13.4 FHD Touch Laptop",
+      "description": "The new Razer Book 13 Laptop is a powerful slim laptop that weighs in at just 1.4Kg. This Razer Beast is powered by Intel Core i7-1165G7 Quad-Core Processor (12MB Cache, 2.80GHz up to 4.70GHz) and has 13.4 Full HD Matte 60Hz Slim side bezel Touch display with Up to 178Â° wide viewing angles. This Razer Book 13 featured with 16GB dual-channel (fixed), 512GB PCIe SSD, Intel Iris Xe Graphics. The keyboard of the laptop has Per Key RGB feature that is powered by Razer's own Razer Chroma software and adding to that, it also has Anti-Ghosting ability with Microsoft",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/book-13/book-13-500x500.jpg",
+      "status": "In Stock",
+      "price": "190,00",
+      "regular-price": "203,500",
+      "condition": "new",
+      "slug": "Electronics",
+      "category": "Electronics",
+      "keywords": "laptop,ryzen",
+      "images": [
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/book-13/book-13-1-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/book-13/book-13-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/book-13/book-13-3-500x500.jpg"
+        }
+      ],
+
+      "attributes": [
+        {
+          "name": "processor",
+          "value": "Intel Core i7-1165G7 Quad-Core Processor (12MB Cache, 2.80GHz up to 4.70GHz)"
+        },
+        {
+          "name": "model",
+          "value": "Razer Book 13"
+        },
+        {
+          "name": "Display",
+          "value": "13.4 (1920 x 1200) Full HD Matte 60Hz Slim side bezel Touch display with Up to 178° wide viewing angles"
+        },
+        {
+          "name": "Memory",
+          "value": "16GB Dual-Channel RAM"
+        },
+        {
+          "name": "Storage",
+          "value": "512GB PCIe SSD"
+        },
+        {
+          "name": "Graphics",
+          "value": "Intel Iris Xe Graphics"
+        },
+        {
+          "name": "Operating System",
+          "value": "Windows 10 Home"
+        },
+        {
+          "name": "Battery",
+          "value": "55 WHr"
+        },
+        {
+          "name": "Adapter",
+          "value": "65W power adapter"
+        },
+        {
+          "name": "Audio",
+          "value": "3.5mm Combo-Jack 2 Speakers + Smart Amp  THX Spatial Audio 4 Mic Array"
+        },
+        {
+          "name": "Keyboard",
+          "value": "Per-Key RGB, powered by Razer Chroma Anti-Ghosting"
+        },
+        {
+          "name": "WebCam",
+          "value": "Windows Hello built-in IR HD webcam (1MP / 720P)"
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "value": "1 Year"
+        }
+      ]
+    }
+  ]
+}

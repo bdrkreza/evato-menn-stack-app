@@ -1,17 +1,19 @@
-import type { NextPage } from "next";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import {
   FeaturedProducts,
   GamingProducts,
   HeroBanner,
-  Trending,
+  TrendingProducts,
   UpcomingProducts,
 } from "../components";
-
+import { ProductItem } from "../contracts/product.type";
 import styles from "../styles/Home.module.css";
-
-const Home: NextPage = () => {
+import product from "./api/data.json";
+interface Props {
+  products: Array<ProductItem>;
+}
+const Home = ({ products }: Props) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -22,26 +24,22 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <HeroBanner />
-        <Trending />
-        <FeaturedProducts />
-        <GamingProducts />
-        <UpcomingProducts />
+        <TrendingProducts products={products} />
+        <FeaturedProducts products={products} />
+        <GamingProducts products={products} />
+        <UpcomingProducts products={products} />
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async (): Promise<any> => {
+  const { products } = await product;
+  return {
+    props: {
+      products: products,
+    },
+  };
+};

@@ -1,0 +1,217 @@
+{
+  "products": [
+    {
+      "productId": "B073JYC4XM",
+      "parent_Id": "B08CLNX58K",
+
+      "manufacturer": "‎Western Digital Technologies Inc.",
+      "product": {
+        "brand": "SanDisk",
+        "title": "SanDisk 128GB Ultra MicroSDXC UHS-I Memory Card with Adapter - 100MB/s, C10, U1, Full HD, A1, Micro SD Card - SDSQUAR-128G-GN6MA",
+        "description": "SanDisk Ultra microSDXC and microSDHC cards are fast for better pictures, app performance, and Full HD video. Ideal for Android smartphones and tablets, these A1-rated cards load apps faster for a better smartphone experience. Available in capacities up to 400GB, you have the capacity to take more pictures and Full HD video and capture life at its fullest. Built to perform in harsh",
+        "rating": 4.7,
+        "condition": "new",
+        "slug": "Electronics"
+      },
+      "keywords": "SanDisk,128GB,Ultra,MicroSDXC,UHS-I,Memory,Card,with,Adapter,-,100MB/s,,C10,,U1,,Full,HD,,A1,,Micro,SD,Card,-,SDSQUAR-128G-GN6MA",
+
+      "link": "https://www.amazon.com/SanDisk-128GB-microSDXC-Memory-Adapter/dp/B073JYC4XM",
+
+      "protection_plans": [
+        {
+          "asin": "B011WVM2B0",
+          "title": "3-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 3.99,
+            "currency": "USD",
+            "raw": "$3.99"
+          }
+        },
+        {
+          "asin": "B00VF4JT6G",
+          "title": "2-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 2.99,
+            "currency": "USD",
+            "raw": "$2.99"
+          }
+        }
+      ],
+      "sell_on_amazon": true,
+      "variants": [
+        {
+          "asin": "B073K14CVB",
+          "title": "16GB",
+          "is_current_product": false,
+          "link": "https://www.amazon.com/dp/B073K14CVB?th=1&psc=1",
+          "dimensions": [
+            {
+              "name": "Capacity",
+              "value": "16GB"
+            }
+          ],
+          "main_image": "https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg",
+          "images": [
+            {
+              "variant": "MAIN",
+              "link": "https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"
+            },
+            {
+              "variant": "PT01",
+              "link": "https://m.media-amazon.com/images/I/71UWMXDzaYS._AC_SL1500_.jpg"
+            },
+            {
+              "variant": "PT02",
+              "link": "https://m.media-amazon.com/images/I/91hH0JJ3ExL._AC_SL1500_.jpg"
+            },
+            {
+              "variant": "PT03",
+              "link": "https://m.media-amazon.com/images/I/918QjkNVwmL._AC_SL1500_.jpg"
+            },
+            {
+              "variant": "PT04",
+              "link": "https://m.media-amazon.com/images/I/81UD9h9vcVL._AC_SL1500_.jpg"
+            },
+            {
+              "variant": "PT05",
+              "link": "https://m.media-amazon.com/images/I/81GcG1pXrbL._AC_SL1500_.jpg"
+            }
+          ]
+        }
+      ],
+      "categories": [
+        {
+          "name": "Electronics",
+          "link": "https://www.amazon.com/electronics-store/b/ref=dp_bc_aui_C_1?ie=UTF8&node=172282",
+          "category_id": "172282"
+        },
+        {
+          "name": "Computers & Accessories",
+          "link": "https://www.amazon.com/computer-pc-hardware-accessories-add-ons/b/ref=dp_bc_aui_C_2?ie=UTF8&node=541966",
+          "category_id": "541966"
+        },
+        {
+          "name": "Computer Accessories & Peripherals",
+          "link": "https://www.amazon.com/Computer-Accessories-Supplies/b/ref=dp_bc_aui_C_3?ie=UTF8&node=172456",
+          "category_id": "172456"
+        },
+        {
+          "name": "Memory Cards",
+          "link": "https://www.amazon.com/Memory-Cards-Computer-Add-Ons-Computers/b/ref=dp_bc_aui_C_4?ie=UTF8&node=516866",
+          "category_id": "516866"
+        },
+        {
+          "name": "Micro SD Cards",
+          "link": "https://www.amazon.com/Micro-SD-Memory-Cards/b/ref=dp_bc_aui_C_5?ie=UTF8&node=3015433011",
+          "category_id": "3015433011"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Brand",
+          "value": "SanDisk"
+        },
+        {
+          "name": "Flash Memory Type",
+          "value": "Micro SD"
+        },
+        {
+          "name": "Hardware Interface",
+          "value": "MicroSDXC"
+        },
+        {
+          "name": "Secure Digital Association Speed Class",
+          "value": "Class 10"
+        },
+        {
+          "name": "Memory Storage Capacity",
+          "value": "128 GB"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "RAM",
+          "value": "‎128 GB"
+        },
+        {
+          "name": "Memory Speed",
+          "value": "‎100 Megabytes Per Second"
+        },
+        {
+          "name": "Brand",
+          "value": "‎SanDisk"
+        },
+        {
+          "name": "Series",
+          "value": "‎SanDisk Ultra 128GB microSDXC UHS-I card with Adapter - SDSQUAR-128G-GN6MA"
+        },
+        {
+          "name": "Item model number",
+          "value": "‎SDSQUAR-128G-GN6MA"
+        },
+        {
+          "name": "Item Weight",
+          "value": "‎0.16 ounces"
+        },
+        {
+          "name": "Product Dimensions",
+          "value": "‎0.03 x 0.59 x 0.43 inches"
+        },
+        {
+          "name": "Item Dimensions  LxWxH",
+          "value": "‎0.03 x 0.59 x 0.43 inches"
+        },
+        {
+          "name": "Department",
+          "value": "‎Memory"
+        },
+        {
+          "name": "Manufacturer",
+          "value": "‎Western Digital Technologies Inc."
+        },
+        {
+          "name": "ASIN",
+          "value": "‎B073JYC4XM"
+        },
+        {
+          "name": "Is Discontinued By Manufacturer",
+          "value": "‎No"
+        },
+        {
+          "name": "Date First Available",
+          "value": "‎August 3, 2017"
+        },
+        {
+          "name": "Customer Reviews",
+          "value": "4.7 out of 5 stars       854,355 ratings          4.7 out of 5 stars"
+        },
+        {
+          "name": "Best Sellers Rank",
+          "value": "#37 in Micro SD Memory Cards"
+        },
+        {
+          "name": "Brand",
+          "value": "SanDisk"
+        },
+        {
+          "name": "Flash Memory Type",
+          "value": "Micro SD"
+        },
+        {
+          "name": "Hardware Interface",
+          "value": "MicroSDXC"
+        },
+        {
+          "name": "Secure Digital Association Speed Class",
+          "value": "Class 10"
+        },
+        {
+          "name": "Memory Storage Capacity",
+          "value": "128 GB"
+        }
+      ]
+    }
+  ]
+}

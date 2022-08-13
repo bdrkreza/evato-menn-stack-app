@@ -1,8 +1,14 @@
 .card-container {
   box-shadow: 1px 1px #888888;
-  border: 1px solid #f2eee2;
+  border: 2px solid #f2eee2;
   position: relative;
   overflow: hidden;
+  min-height: 450px;
+  max-height: 450px;
+  img {
+    max-height: 250px;
+    min-height: 250px;
+  }
   .add-to-cart {
     position: absolute;
     right: 0;
@@ -40,7 +46,124 @@
     margin: 0;
     text-align: center;
 
+    .link {
+      cursor: pointer;
+      background-color: #fafafa;
+      display: block;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      right: -50px;
+      top: 20px;
+      transition: 0.6s;
+      -webkit-transition: 0.6s;
+      li a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        font-size: 15px;
+        background: #eb4141;
+        margin-bottom: 7px;
+        border-radius: 50%;
+        line-height: 35px;
+        color: #fff;
+        cursor: pointer;
+        svg {
+          color: white;
+        }
+      }
+      li .span {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        font-size: 15px;
+        background: #eb4141;
+        margin-bottom: 7px;
+        border-radius: 50%;
+        line-height: 35px;
+        color: #fff;
+        cursor: pointer;
+        svg {
+          color: white;
+        }
+      }
+      li a:hover {
+        color: #fff;
+        background: #e50663;
+      }
+    }
+    a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .card-content {
+    text-align: center;
+    padding: 20px;
+    .category {
+      display: inline-block;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #ff007d;
+      font-weight: 600;
+    }
+
     a {
+      color: #1f2d30;
+      h3 {
+        font-weight: 600;
+        margin: 8px 0 10px;
+        font-size: 20px;
+      }
+    }
+
+    .rating {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 18px;
+      color: #ff0000;
+      span {
+        color: #6f6f6f;
+        text-decoration: line-through;
+        padding-left: 5px;
+        font-weight: 300;
+      }
+    }
+  }
+  .add-to-btn {
+    background-color: #c93c3c;
+    color: #fff;
+    border: 1px solid #c23c3c;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+.cart-container {
+  &:hover figure ul {
+    right: 15px;
+  }
+  figure {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    img {
+      cursor: pointer;
+    }
+    .link {
+      cursor: pointer;
       background-color: #fafafa;
       display: block;
     }
@@ -75,52 +198,95 @@
       text-decoration: none;
     }
   }
-  .card-content {
-    text-align: center;
-    padding: 20px;
-    .category {
-      display: inline-block;
-      font-family: "Open Sans", sans-serif;
-      font-size: 14px;
-      color: #ff007d;
-      font-weight: 600;
+  h1 {
+    font-family: "Trebuchet MS", sans-serif;
+    box-sizing: border-box;
+    margin: 0 0 1px;
+    line-height: 20px;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    height: auto;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary);
+      text-decoration: underline;
     }
-    h3 {
-      font-weight: 600;
-      margin: 8px 0 10px;
-      font-size: 20px;
-      a {
-        color: #1f2d30;
-        &:hover {
-          color: #e64646;
-        }
-      }
-    }
-    .rating {
-      padding: 0;
-      margin: 0;
-      margin-bottom: 10px;
-    }
-    .price {
-      font-size: 18px;
-      color: #ff0000;
-      span {
-        color: #6f6f6f;
-        text-decoration: line-through;
-        padding-left: 5px;
-        font-weight: 300;
+  }
+  .short-description {
+    font-family: "Trebuchet MS", sans-serif;
+    flex: 1 1 auto;
+    border-bottom: 1px solid #eee;
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+      li {
+        font-size: 14px;
+        color: #666;
+        position: relative;
+        line-height: 16px;
+        padding-bottom: 10px;
       }
     }
   }
-  .add-to-btn {
-    background-color: #c93c3c;
-    color: #fff;
-    border: 1px solid #c23c3c;
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: "Open Sans", sans-serif;
+  .p-item-price {
+    padding-top: 10px;
+    text-align: center;
+    .price-new {
+      line-height: 22px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #ef4a23;
+      margin-right: 10px;
+    }
+    .price-old {
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: line-through;
+      color: #666;
+      padding-left: 5px;
+    }
+  }
+  .actions {
+    text-align: center;
+    width: 100%;
+    .st-btn {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: center;
+      text-decoration: none;
+      background: #fff;
+      background: rgba(55, 75, 185, 0.1);
+      color: #3749bb;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #5465d183;
+      }
+      svg {
+        font-size: 22px;
+        margin-right: 10px;
+      }
+    }
+    .btn-compare {
+      font-family: "Trebuchet MS", sans-serif;
+      background: none;
+      margin-top: 7px;
+      border: none;
+      color: #666;
+      font-weight: 400;
+      font-size: 13px;
+      text-decoration: none;
+    }
   }
 }
