@@ -18,7 +18,6 @@ const style = {
 };
 
 export default function QuickView({ data }: any) {
-  console.log(data);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

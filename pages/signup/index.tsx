@@ -11,7 +11,11 @@ import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import * as React from "react";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import { useRegisterMutation } from "../../redux/reducers/user-api";
 
 function Copyright(props: any) {
   return (
@@ -34,17 +38,51 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+  const router = useRouter();
+  const [registerUser, { isLoading, isSuccess, error }] = useRegisterMutation();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data: any) => {
+    const { name, email, password } = data;
+    if (email && password) {
+      await registerUser({
+        name: name,
+        email: email,
+        password: password,
+      });
+    } else {
+      toast.error("please fill all input field");
+    }
+    reset();
   };
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("user sign-up successfully");
+      router.push("/signin");
+    }
+    if (error) {
+      toast.error(error?.data?.message);
+    }
+  }, [error, isSuccess, router]);
 
   return (
     <ThemeProvider theme={theme}>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -64,19 +102,20 @@ export default function SignUp() {
           <Box
             component="form"
             noValidate
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
                   required
                   fullWidth
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  {...register("name", { required: true })}
+                  error={Boolean(errors.name)}
                 />
               </Grid>
 
@@ -86,19 +125,21 @@ export default function SignUp() {
                   fullWidth
                   id="email"
                   label="Email Address"
-                  name="email"
                   autoComplete="email"
+                  {...register("email", { required: true })}
+                  error={Boolean(errors.email)}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  name="password"
                   label="Password"
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  {...register("password", { required: true })}
+                  error={Boolean(errors.password)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -115,12 +156,13 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              disabled={isLoading}
             >
               Sign Up
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/signin" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>

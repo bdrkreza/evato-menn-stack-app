@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import PersonIcon from "@mui/icons-material/Person";
 import { Box, Card, Grid, Typography } from "@mui/material";
+
 type Props = {};
 
 export default function ProfileInfo({}: Props) {

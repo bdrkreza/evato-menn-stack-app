@@ -11,32 +11,63 @@ import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useTokenMutation } from "../../redux/user-api";
+import { useDispatch } from "react-redux";
+import { toast, ToastContainer } from "react-toastify";
+import { setToken } from "../../redux";
+import { useTokenMutation } from "../../redux/reducers/user-api";
 
 const theme = createTheme();
 
 export default function SignIn() {
-  const [token, { data, isLoading, error }] = useTokenMutation();
-  if (data) {
-    // <Navigate to="/dashboard" replace={true} />;
-  }
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const [getToken, { data, isSuccess, isLoading, error }] = useTokenMutation();
+  console.log("error message", error);
+  console.log("token message", data);
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data: any) => {
-    token({
-      email: data.email,
-      password: data.password,
-    });
+
+  const onSubmit = async (data: any) => {
+    const { email, password } = data;
+    if (email && password) {
+      await getToken({
+        email: email,
+        password: password,
+      });
+    } else {
+      toast.error("please fill all input field");
+    }
     reset();
   };
 
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("user Login successfully");
+      dispatch(setToken(data?.token));
+      router.push("/");
+    }
+  }, [data?.token, dispatch, isSuccess, router]);
+
   return (
     <ThemeProvider theme={theme}>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Container component="main" maxWidth="xs" className="my-5">
         <CssBaseline />
         <Box
@@ -64,6 +95,7 @@ export default function SignIn() {
               required
               fullWidth
               id="email"
+              defaultValue={"diureza@gmail.com"}
               label="Email Address"
               {...register("email", { required: true })}
               error={Boolean(errors.email)}
@@ -74,6 +106,7 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
+              defaultValue={"123456"}
               {...register("password", { required: true })}
               error={Boolean(errors.password)}
               label="Password"
@@ -101,7 +134,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

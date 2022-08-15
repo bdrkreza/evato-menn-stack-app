@@ -9,7 +9,7 @@ export default function TrendingProducts({ products }: Props) {
   const product: ProductItem[] | undefined = products?.filter(
     (item: ProductItem) => item?.category === "trending"
   );
-  console.log("trending product", product);
+  // console.log("trending product", product);
   return (
     <div className="container mt-5">
       <div className="trending">
