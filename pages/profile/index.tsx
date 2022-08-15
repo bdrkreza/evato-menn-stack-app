@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
@@ -19,6 +20,13 @@ import {
 type Props = {};
 
 export default function Profile({}: Props) {
+  // const user = useSelector(selectToken);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   // checks if the user is authenticated
+  //   user ? router.push("/profile") : router.push("/");
+  // }, [user]);
+
   const [show, setShow] = useState(true);
   const toggle = () => {
     setShow((show) => !show);
@@ -108,6 +116,17 @@ export default function Profile({}: Props) {
       </TabContext>
     </nav>
   );
+}
+
+export async function getServerSideProps(ctx: any) {
+  const { token } = ctx;
+  if (!token) {
+    ctx.res.writeHead(302, { location: "/signin" });
+    ctx.res.end();
+  }
+  return {
+    props: {},
+  };
 }
 
 const variants = {

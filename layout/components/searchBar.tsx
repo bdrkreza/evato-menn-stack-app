@@ -1,15 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, Button, Divider, InputBase } from "@mui/material";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { AiOutlineBell } from "react-icons/ai";
 import { BsChatQuote, BsPerson, BsSearch } from "react-icons/bs";
 import { CgShoppingBag } from "react-icons/cg";
+import { useDispatch, useSelector } from "react-redux";
 import brandLogo from "../../assets/brandlogo/brandlogo.png";
+import { selectToken, setToken } from "../../redux";
+import UserDropMenu from "./user-dropdown-menu";
 type Props = {};
 
 export default function SearchBar({}: Props) {
+  const dispatch = useDispatch();
+  const user = useSelector(selectToken);
+  let loginUser = false;
+  if (user) {
+    loginUser = true;
+  } else {
+    loginUser = false;
+  }
+  useEffect(() => {
+    const token = localStorage.getItem("token") || "";
+    dispatch(setToken(token));
+  }, [dispatch]);
+
   const lazyRoot = useRef(null);
   return (
     <div>
@@ -82,13 +99,19 @@ export default function SearchBar({}: Props) {
                 </div>
 
                 {/* userProfile section */}
-                <li className="nav-ite">
-                  <Link href={"/signin"} passHref>
-                    <a className="nav-link  nav_link top_icon d-block">
-                      <BsPerson />
-                    </a>
-                  </Link>
-                </li>
+
+                {user.token ? (
+                  <UserDropMenu />
+                ) : (
+                  <li className="nav-ite">
+                    <Link href={"signin"}>
+                      <a className="nav-link  nav_link top_icon d-block">
+                        <BsPerson />
+                      </a>
+                    </Link>
+                  </li>
+                )}
+
                 {/* <ShoppingCart /> */}
                 <li className="nav-ite">
                   <a className="nav-link  nav_link top_icon d-block">

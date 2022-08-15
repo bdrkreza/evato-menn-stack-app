@@ -1,4 +1,4 @@
-import { useGetCategoryQuery } from "../redux/productApi";
+import { useGetCategoryQuery } from "../redux/reducers/productApi";
 import NavbarNav from "./components/navbar-nav";
 import SearchBar from "./components/searchBar";
 import TopBar from "./components/topbar";
