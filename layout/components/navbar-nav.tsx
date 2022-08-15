@@ -1,4 +1,4 @@
-import { AppBar, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { Fragment, useEffect, useState } from "react";
 import { FaList } from "react-icons/fa";
 import { TiArrowSortedDown } from "react-icons/ti";
@@ -24,7 +24,7 @@ export default function Navbar_nav({ data }: Props) {
   return (
     <Fragment>
       {/* Navbar 1 */}
-      <AppBar
+      <div
         className={
           scrolled
             ? "navbar-sticky navbar navbar-expand-md navbar-2"
@@ -58,7 +58,7 @@ export default function Navbar_nav({ data }: Props) {
             ))}
           </ul>
         </div>
-      </AppBar>
+      </div>
     </Fragment>
   );
 }
