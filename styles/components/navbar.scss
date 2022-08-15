@@ -1,6 +1,7 @@
 .navbar-sticky {
   background: #333;
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   box-shadow: 1px 1px 1px #222;
@@ -14,29 +15,6 @@
   to {
     transform: translateY(0rem);
   }
-}
-
-.navbar-1 .nav_link:hover {
-  border: 1px solid var(--placeholder);
-}
-
-.navbar-1 {
-  background-color: var(--border-colo);
-}
-
-.navbar-1 .nav_link {
-  border: 1px dotted #b68282;
-  margin: 0px 6px;
-  border-radius: 50%;
-  padding: 5px 7px;
-  box-shadow: 0px 0px 2px #efe0e0;
-  cursor: pointer;
-}
-
-.top_icon svg {
-  color: #111010;
-  width: 20px;
-  height: 20px;
 }
 
 /********* Navbar 2 ***********/
@@ -140,48 +118,45 @@
   display: none;
 }
 
-.notification_menu {
-  position: relative;
-}
-.notification_cart {
-  position: absolute;
-  margin-top: 20px;
-  box-shadow: 0px 0px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 2px;
-  transition: 0.3s;
-  width: 400px;
-  z-index: 20;
-}
+// .notification_cart {
+//   position: absolute;
+//   margin-top: 20px;
+//   box-shadow: 0px 0px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19);
+//   border-radius: 2px;
+//   transition: 0.3s;
+//   width: 400px;
+//   z-index: 20;
+// }
 
-.notification_btn a {
-  font-weight: 400;
-  font-size: large;
-  transition: all 0.3s ease-out 0s;
-  position: relative;
-  z-index: 1;
-}
+// .notification_btn a {
+//   font-weight: 400;
+//   font-size: large;
+//   transition: all 0.3s ease-out 0s;
+//   position: relative;
+//   z-index: 1;
+// }
 
-.notification_btn a::after {
-  content: "";
-  position: relative;
-  display: block;
-  height: 2px;
-  width: 0;
-  border-radius: 16px;
-  background: rgb(211, 58, 19);
-  bottom: 1px;
-  left: 0;
-  z-index: -1;
-  transition: all 0.3s ease-out 0s;
-}
+// .notification_btn a::after {
+//   content: "";
+//   position: relative;
+//   display: block;
+//   height: 2px;
+//   width: 0;
+//   border-radius: 16px;
+//   background: rgb(211, 58, 19);
+//   bottom: 1px;
+//   left: 0;
+//   z-index: -1;
+//   transition: all 0.3s ease-out 0s;
+// }
 
-.notification_btn a:hover::after {
-  width: 100%;
-}
+// .notification_btn a:hover::after {
+//   width: 100%;
+// }
 
-.notification_btn a:focus::after {
-  width: 100%;
-}
+// .notification_btn a:focus::after {
+//   width: 100%;
+// }
 
 .card svg {
   width: 100px !important;

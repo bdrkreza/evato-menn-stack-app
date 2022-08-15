@@ -66,7 +66,7 @@ export default function SignUp() {
       router.push("/signin");
     }
     if (error) {
-      toast.error(error?.data?.message);
+      toast.error("server errors");
     }
   }, [error, isSuccess, router]);
 

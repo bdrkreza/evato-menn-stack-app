@@ -62,7 +62,7 @@ export default function UserDropMenu() {
         aria-haspopup="true"
         onClick={handleToggle}
       >
-        <a className="nav-link  nav_link top_icon d-block">
+        <a className="nav-link  d-block">
           <Avatar sx={{ width: 25, height: 25 }}>M</Avatar>
         </a>
       </Box>

@@ -3,3 +3,81 @@
     display: none;
   }
 }
+.search-bar {
+  .nav-icon-btn {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    a {
+      border: 1px solid #b68282;
+      margin: 0px 6px;
+      border-radius: 50%;
+      padding: 5px 7px;
+      box-shadow: 0px 0px 2px #efe0e0;
+      &:hover {
+        border: 1px solid var(--placeholder);
+      }
+      cursor: pointer;
+      svg {
+        color: #111010;
+        width: 20px;
+        height: 20px;
+      }
+      span {
+        position: absolute;
+        text-align: center;
+        z-index: 1;
+        background-color: orangered;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        right: 5px;
+        top: 0;
+        color: white;
+      }
+    }
+  }
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  span {
+    text-align: center;
+    background-color: orangered;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    color: white;
+  }
+  strong {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.shop-card {
+  .text-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    span {
+      text-align: center;
+      background-color: orangered;
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+      color: white;
+    }
+    strong {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}
