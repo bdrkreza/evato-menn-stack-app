@@ -16,11 +16,16 @@ import Stack from "@mui/material/Stack";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 import { useEffect, useRef, useState } from "react";
-import jsonData from "../../pages/api/data.json";
 
+import Link from "next/link";
 import { FiShoppingBag } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { cartItem, removeFromCart } from "../../redux";
 
 export default function ShopDropCard() {
+  const dispatch = useDispatch();
+  const product = useSelector(cartItem);
+  console.log(product);
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
   const handleToggle = () => {
@@ -67,8 +72,8 @@ export default function ShopDropCard() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <a className="nav-link  d-block">
-            {open ? null : <span>1</span>}
+          <a className="nav-link">
+            {open ? null : <span>{product?.cartItems?.length}</span>}
             <FiShoppingBag />
           </a>
         </Box>
@@ -128,85 +133,120 @@ export default function ShopDropCard() {
                             h1: {
                               height: "21px",
                               width: "21px",
-
                               fontSize: "14px",
                               borderRadius: "100%",
                               lineHeight: "18px",
-                              textAlign: "center",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
                               color: "white",
                               backgroundColor: "orangered",
                             },
                           }}
                         >
                           <strong>items</strong>
-                          <Typography component={"h1"}>2</Typography>
+                          <Typography component={"h1"}>
+                            {product?.cartItems?.length}
+                          </Typography>
                         </Box>
                       </Typography>
                     </CardContent>
 
                     <Divider />
-                    {jsonData.products.slice(1, 5).map((data, index) => (
-                      <>
-                        <Box
-                          key={index}
-                          sx={{
-                            display: "flex",
-                            padding: "10px 15px",
-                            height: "60%",
-                            width: "100%",
-                            cursor: "pointer",
-                            "&:hover": {
-                              backgroundColor: "var(--light)",
-                            },
-                            gap: 2,
-                            img: {
-                              height: "20%",
-                              width: "20%",
-                              maxHeight: "60px",
-                              minWidth: "90px",
-                            },
-                          }}
-                        >
-                          <CardMedia
-                            component="img"
-                            image={data.featuredAsset.preview}
-                            alt="Paella dish"
-                          />
-                          <Typography
-                            component={"div"}
+                    {product?.cartItems?.length === 0 ? (
+                      <Typography
+                        sx={{
+                          textAlign: "center",
+                          padding: "20px",
+                          fontSize: "20px",
+                          fontWeight: 600,
+                          lineHeight: "30px",
+                          whiteSpace: "20px",
+                        }}
+                      >
+                        Your cart is Currently empty
+                      </Typography>
+                    ) : (
+                      product.cartItems.map((data, index) => (
+                        <>
+                          <Box
+                            key={index}
+                            className="my-2"
                             sx={{
-                              width: "100%",
                               display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "center",
-                              h1: {
-                                fontSize: "14px",
-                                fontWeight: 600,
+                              padding: "0px 10px",
+                              height: "80px",
+                              width: "100%",
+                              cursor: "pointer",
+
+                              "&:hover": {
+                                backgroundColor: "var(--light)",
+                                span: {
+                                  textDecoration: "underline",
+                                  color: "orange",
+                                },
                               },
-                              h2: {
-                                fontSize: "13px",
-                                fontWeight: 500,
-                                lineHeight: "20px",
-                                whiteSpace: "20px",
+                              gap: 2,
+                              img: {
+                                height: "100%",
+                                width: "20%",
+                                minWidth: "90px",
                               },
                             }}
                           >
-                            <Typography component={"h1"}>
-                              <div
-                                className="text-truncate"
-                                style={{ maxWidth: "200px" }}
-                              >
-                                {data.name}
-                              </div>
-                              <Typography component={"h2"}>
-                                ${data.variants[0].price}
+                            <CardMedia
+                              component="img"
+                              image={data.featuredAsset.preview}
+                              alt="Paella dish"
+                            />
+                            <Typography
+                              component={"div"}
+                              sx={{
+                                width: "100%",
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                h1: {
+                                  fontSize: "14px",
+                                  fontWeight: 600,
+                                },
+                                h2: {
+                                  fontSize: "13px",
+                                  fontWeight: 500,
+                                  lineHeight: "20px",
+                                  whiteSpace: "20px",
+                                },
+                              }}
+                            >
+                              <Typography component={"h1"}>
+                                <span
+                                  className="text-truncate title"
+                                  style={{ maxWidth: "200px" }}
+                                >
+                                  {data.name}
+                                </span>
+                                <Typography component={"h2"}>
+                                  {data.cartQuantity}x {data.variants[0].price}৳
+                                </Typography>
                               </Typography>
+                              <Box
+                                sx={{
+                                  svg: {
+                                    height: "30px",
+                                    width: "30px",
+                                    color: "var(--primary)",
+                                  },
+                                }}
+                              >
+                                <CancelIcon
+                                  onClick={() => dispatch(removeFromCart(data))}
+                                />
+                              </Box>
                             </Typography>
-                            <CancelIcon />
-                          </Typography>
-                        </Box>
-                      </>
-                    ))}
+                          </Box>
+                        </>
+                      ))
+                    )}
                     <Divider />
                     <Box
                       sx={{
@@ -215,19 +255,32 @@ export default function ShopDropCard() {
                         padding: "10px",
                       }}
                     >
-                      <Button
-                        variant="contained"
-                        sx={{ backgroundColor: "var(--blue)" }}
-                      >
-                        view Cart
-                      </Button>
-                      <Button
-                        endIcon={<HiOutlineArrowNarrowRight />}
-                        variant="contained"
-                        sx={{ backgroundColor: "var(--primary)" }}
-                      >
-                        Checkout
-                      </Button>
+                      <Link href={"/checkout"}>
+                        <Button
+                          variant="outlined"
+                          sx={{
+                            backgroundColor: "var(--blue)",
+                            color: "white",
+                            "&:hover": {
+                              color: "black",
+                            },
+                          }}
+                        >
+                          view Cart
+                        </Button>
+                      </Link>
+                      <Link href={"/order"} passHref>
+                        <Button
+                          endIcon={<HiOutlineArrowNarrowRight />}
+                          variant="outlined"
+                          sx={{
+                            backgroundColor: "var(--primary)",
+                            color: "white",
+                          }}
+                        >
+                          confirm order
+                        </Button>
+                      </Link>
                     </Box>
                   </Card>
                 </ClickAwayListener>

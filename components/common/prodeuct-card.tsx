@@ -2,9 +2,16 @@
 import Link from "next/link";
 import { BsHeartFill } from "react-icons/bs";
 import { FiRefreshCw } from "react-icons/fi";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux";
+
 import QuickView from "../quick-view/quick-view";
 
 export default function ProductCard({ data }: any) {
+  const dispatch = useDispatch();
+  const handleAddToCart = (product: any) => {
+    dispatch(addToCart(product));
+  };
   return (
     <>
       <div className="card-container">
@@ -57,7 +64,9 @@ export default function ProductCard({ data }: any) {
         </div>
 
         <div className="add-to-cart">
-          <a className="add-to-btn">Add to Cart</a>
+          <a className="add-to-btn" onClick={() => handleAddToCart(data)}>
+            Add to Cart
+          </a>
         </div>
       </div>
     </>

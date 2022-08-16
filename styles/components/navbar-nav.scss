@@ -13,7 +13,8 @@
       align-items: center;
       gap: 15px;
     }
-    a {
+    .nav-link {
+      text-align: center;
       border: 1px solid #b68282;
       margin: 0px 6px;
       border-radius: 50%;
@@ -30,7 +31,9 @@
       }
       span {
         position: absolute;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 1;
         background-color: orangered;
         border-radius: 50%;
@@ -121,7 +124,8 @@
     display: flex;
     align-items: center;
     &:hover {
-      color: orangered;
+      color: white;
+      background-color: var(--primary);
     }
     &:active {
       color: white;

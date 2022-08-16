@@ -66,7 +66,7 @@ export default function NotificationCard() {
           onClick={handleToggle}
         >
           <a className="nav-link" href="#">
-            {open ? null : <span>1</span>}
+            {open ? null : <span>{ntItem.length}</span>}
             <AiOutlineBell />
           </a>
         </Box>
@@ -113,7 +113,7 @@ export default function NotificationCard() {
                     >
                       <Typography className="notification">
                         <strong>notification</strong>
-                        <span>2</span>
+                        <span>{ntItem.length}</span>
                       </Typography>
                     </CardContent>
 

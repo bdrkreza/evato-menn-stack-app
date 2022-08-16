@@ -1,9 +1,8 @@
 import { Logout, Settings } from "@mui/icons-material";
-import { Avatar, Box, Divider, ListItemIcon } from "@mui/material";
+import { Avatar, Box, Card, Divider, ListItemIcon } from "@mui/material";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Grow from "@mui/material/Grow";
 import MenuItem from "@mui/material/MenuItem";
-import MenuList from "@mui/material/MenuList";
 import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import Stack from "@mui/material/Stack";
@@ -110,12 +109,7 @@ export default function UserDropMenu() {
               }}
             >
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList
-                  autoFocusItem={open}
-                  id="composition-menu"
-                  aria-labelledby="composition-button"
-                  onKeyDown={handleListKeyDown}
-                >
+                <Card>
                   <Link href="/profile">
                     <MenuItem onClick={handleClose}>
                       <Avatar /> Profile
@@ -140,7 +134,7 @@ export default function UserDropMenu() {
                     </ListItemIcon>
                     Logout
                   </MenuItem>
-                </MenuList>
+                </Card>
               </ClickAwayListener>
             </Paper>
           </Grow>
