@@ -1,0 +1,195 @@
+.checkout-cart {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  min-height: 400px;
+  padding: 15px;
+  h1 {
+    font-family: "Trebuchet MS", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 20px;
+  }
+  .table {
+    .table-cell {
+      padding: 14px 10px;
+      color: #666;
+      font-size: 14px;
+      font-weight: 600;
+      background: #f5f7f9;
+    }
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 1);
+      text-transform: capitalize;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    .td {
+      font-weight: 600;
+      font-size: 20px;
+      font-family: "Trebuchet MS", sans-serif;
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+      font-size: 18px;
+      box-sizing: border-box;
+    }
+    .td-price {
+      font-family: "Trebuchet MS", sans-serif;
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+      margin: 0;
+      text-align: right;
+      padding: 12px 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ef4a23;
+    }
+    .t-link {
+      font-size: large;
+      cursor: pointer;
+      a:hover {
+        text-decoration: underline;
+        color: #ef4a23;
+      }
+    }
+    .quantity {
+      display: flex;
+      margin-right: 20px;
+      width: 0px;
+      .ctl {
+        border: solid 1px black;
+      }
+      span {
+        display: flex;
+        flex: 0 0 40px;
+        align-items: center;
+        text-align: center;
+        height: 20px;
+        width: 25px;
+        background-color: #edf2f5;
+        &:hover {
+          background-color: antiquewhite;
+        }
+        svg {
+          margin: 0 auto;
+          cursor: pointer;
+          font-size: 20px;
+          height: 20px;
+        }
+      }
+      .qty input {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        font-size: 15px;
+        padding: 5px 10px;
+        background: #edf2f5;
+        outline: none;
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        border: none;
+        box-shadow: 1px 0 0 #edf2f5, -1px 0 0 #edf2f5;
+        text-align: center;
+      }
+    }
+  }
+
+  .shop-btn {
+    font-family: "Trebuchet MS", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    background: #3749bb;
+    border: 2px solid #3749bb;
+    padding: 0 20px;
+    margin: 0;
+    height: 42px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    transition: all 300ms linear;
+  }
+  .c-title {
+    font-family: "Trebuchet MS", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 3;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
+
+  .page-section {
+    font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background: #f1f5f9;
+  }
+  .form-control {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 15px;
+    height: 42px;
+    padding: 5px 15px;
+    background: #fff;
+    outline: none;
+    width: 100%;
+    font-family: "Trebuchet MS", sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1 1 auto;
+  }
+  .btn {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: "Trebuchet MS", sans-serif;
+    display: inline-block;
+    border: 2px solid #3749bb;
+    padding: 0 20px;
+    margin: 0;
+    height: 42px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    transition: all 300ms linear;
+    background: none;
+    color: #3749bb;
+    flex: 1 1 auto;
+  }
+}

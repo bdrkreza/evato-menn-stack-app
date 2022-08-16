@@ -1,3 +1,5 @@
+import CheckoutCart from "./checkout/checkout-cart";
+import DiscountCart from "./checkout/discount-cart";
 import ProductCard3 from "./common/product-card-3";
 import ProductCarousel from "./common/product-carousel";
 import FeaturedProducts from "./home/featuredProducts/featured-products";
@@ -41,4 +43,6 @@ export {
   Addresses,
   PaymentMethod,
   ProductCard3,
+  CheckoutCart,
+  DiscountCart,
 };

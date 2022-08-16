@@ -10,8 +10,8 @@ export default function UpcomingProducts({ products }: Props) {
     (item: ProductItem) => item?.category === "upcoming"
   );
   return (
-    <div>
-      <div className="container mt-5">
+    <>
+      <div className="container my-5">
         <div className="section-title">
           <h4>
             upcoming Products <span className="px-2">top</span>
@@ -21,6 +21,6 @@ export default function UpcomingProducts({ products }: Props) {
           <ProductCarousel products={product} />
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -3,12 +3,14 @@ import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { productApi } from "../reducers/productApi";
 import { authApi } from "../reducers/user-api";
-import authSlice from "../slices/authSlice";
+import authReducer from "../slices/authSlice";
+import cartReducer from "../slices/cartSlice";
 
 const rootReducer = combineReducers({
-  auth: authSlice,
   [productApi.reducerPath]: productApi.reducer,
   [authApi.reducerPath]: authApi.reducer,
+  auth: authReducer,
+  cart: cartReducer,
 });
 
 const store = configureStore({
@@ -24,3 +26,10 @@ export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 setupListeners(store.dispatch);
 export default store;
+
+store.subscribe(() => {
+  localStorage.setItem(
+    "cartItems",
+    JSON.stringify(store.getState().cart.cartItems)
+  );
+});

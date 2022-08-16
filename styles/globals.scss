@@ -4,6 +4,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -40,3 +43,4 @@ a {
 @import "./components/product-vertical-slider.scss";
 @import "./components/filter-panel.scss";
 @import "./components/nestedMenu.scss";
+@import "./components/checkout.scss";
