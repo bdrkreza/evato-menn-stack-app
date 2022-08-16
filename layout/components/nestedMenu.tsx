@@ -14,7 +14,7 @@ export default function NestedMenu({ data }: any) {
               className="dropdown-item"
               href={`/${category.slug}?cid=${category._id}&type=${category.type}`}
             >
-              <MdOutlineArrowRight />
+              {/* <MdOutlineArrowRight /> */}
               {category.name}
             </a>
           ) : (

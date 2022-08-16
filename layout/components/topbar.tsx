@@ -2,7 +2,7 @@ import { GoLocation } from "react-icons/go";
 export default function TopBar() {
   return (
     <>
-      <div className="nav-top d-none d-md-block border-bottom p-3">
+      <div className="nav-top d-none d-md-block border-bottom p-2">
         <div className="container nav">
           <li className="nav-item mr-3">
             <svg
