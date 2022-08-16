@@ -1,7 +1,5 @@
-import { Button } from "@mui/material";
 import { Fragment, useEffect, useState } from "react";
 import { FaList } from "react-icons/fa";
-import { TiArrowSortedDown } from "react-icons/ti";
 import { ICategory } from "../../contracts/category.type";
 import NestedMenu from "./nestedMenu";
 type Props = {
@@ -27,11 +25,11 @@ export default function Navbar_nav({ data }: Props) {
       <div
         className={
           scrolled
-            ? "navbar-sticky navbar navbar-expand-md navbar-2"
-            : "navbar navbar-expand-md navbar-2"
+            ? "navbar-sticky navbar navbar-expand-md header-nav"
+            : "navbar navbar-expand-md header-nav"
         }
       >
-        <div className="container nav-container">
+        <div className="container">
           <div className="nested-dropdown">
             <div className="dropdown">
               <div
@@ -43,16 +41,18 @@ export default function Navbar_nav({ data }: Props) {
               >
                 <FaList />
                 <span>Catagories</span>
-                <TiArrowSortedDown />
+                {/* <TiArrowSortedDown /> */}
               </div>
               <NestedMenu data={data} />
             </div>
           </div>
 
-          <ul className="navbar-nav mr-auto pl-5">
+          <ul className="navbar-nav mr-auto pl-2">
             {nav.map(({ label }, index) => (
               <div className="dropdown ml-4" key={index}>
-                <Button className="btn-style">{label}</Button>
+                <li className="nav-link" color="inherit">
+                  {label}
+                </li>
                 {/* <DropdownMenu /> */}
               </div>
             ))}
