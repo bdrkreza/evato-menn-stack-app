@@ -11,6 +11,7 @@ export default function Checkout({}: Props) {
       <Card className="container checkout-cart">
         <h1>shopping Cart</h1>
         <CheckoutCart />
+
         <DiscountCart />
         <Box
           sx={{
@@ -29,7 +30,7 @@ export default function Checkout({}: Props) {
               Continue Shopping
             </Button>
           </Link>
-          <Link href={"/order"}>
+          <Link href={"/checkout/order"}>
             <Button variant="outlined" className="shop-btn">
               Confirm Order
             </Button>

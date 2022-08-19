@@ -1,20 +1,9 @@
-export const authMiddleware = (req: any) => {
-  let { token }: any = localStorage.getItem("token") || "";
-  let url = req.url;
-  if (!token && url.include("/profile")) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
-  if (token && url === "http://localhost:3000/") {
-    return {
-      redirect: {
-        destination: "/profile",
-        permanent: true,
-      },
-    };
+import jwt from "jsonwebtoken";
+
+export const createAccessToken = (user: any) => {
+  if (process.env.ACCESS_TOKEN_SECRET !== undefined) {
+    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+      expiresIn: "1d",
+    });
   }
 };

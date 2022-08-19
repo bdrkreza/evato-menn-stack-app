@@ -81,24 +81,17 @@ export default function SearchBar({}: Props) {
                   <NotificationCard />
                 </li>
 
-                {/* ChatSection */}
-                {/* <li>
-                  <ChatCard />
-                </li> */}
-
                 {/* <ShoppingCart /> */}
-
                 <li>
                   <ShopDropCard />
                 </li>
 
                 {/* userProfile section */}
-
                 {user.token ? (
                   <UserDropMenu />
                 ) : (
                   <li className="nav-item">
-                    <Link href={"signin"}>
+                    <Link href="signin">
                       <a className="nav-link  d-block">
                         <BsPerson />
                       </a>

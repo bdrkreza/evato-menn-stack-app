@@ -13,14 +13,14 @@ export const authApi = createApi({
 
     token: builder.mutation({
       query: (body: { email: string; password: string }) => ({
-        url: `/api/users/login`,
+        url: `api/users/login`,
         method: "POST",
         body,
       }),
     }),
     register: builder.mutation({
       query: (body: { name: string; email: string; password: string }) => ({
-        url: `/api/users`,
+        url: `api/users/register`,
         method: "POST",
         body,
       }),

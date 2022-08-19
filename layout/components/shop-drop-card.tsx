@@ -257,6 +257,7 @@ export default function ShopDropCard() {
                     >
                       <Link href={"/checkout"}>
                         <Button
+                          onClick={handleClose}
                           variant="outlined"
                           sx={{
                             backgroundColor: "var(--blue)",
@@ -269,8 +270,9 @@ export default function ShopDropCard() {
                           view Cart
                         </Button>
                       </Link>
-                      <Link href={"/order"} passHref>
+                      <Link href={"/checkout/order"} passHref>
                         <Button
+                          onClick={handleClose}
                           endIcon={<HiOutlineArrowNarrowRight />}
                           variant="outlined"
                           sx={{
