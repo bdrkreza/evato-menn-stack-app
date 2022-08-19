@@ -13,6 +13,7 @@ import {
 } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { cartItem, removeFromCart } from "../../redux";
+import { addToCart, decreaseCart } from "../../redux/slices/cartSlice";
 
 const TAX_RATE = 0.07;
 
@@ -54,6 +55,18 @@ export default function CheckoutCart() {
   const dispatch = useDispatch();
   const { cartItems } = useSelector(cartItem);
 
+  const handleAddToCart = (product: any) => {
+    dispatch(addToCart(product));
+  };
+  const handleDecreaseCart = (product: any) => {
+    dispatch(decreaseCart(product));
+  };
+  const handleRemoveFromCart = (product: any) => {
+    dispatch(removeFromCart(product));
+  };
+  // const handleClearCart = () => {
+  //   dispatch(clearCart());
+  // };
   return (
     <TableContainer className="table">
       <Table sx={{ minWidth: 700 }} aria-label="spanning table">
@@ -108,14 +121,17 @@ export default function CheckoutCart() {
                       type="text"
                       name="quantity"
                       id="input-quantity"
-                      value="1"
+                      value={row.cartQuantity}
                     />
                   </span>
                   <div>
-                    <span className="ctl">
+                    <span className="ctl" onClick={() => handleAddToCart(row)}>
                       <MdKeyboardArrowUp />
                     </span>
-                    <span className="ctl">
+                    <span
+                      className="ctl"
+                      onClick={() => handleDecreaseCart(row)}
+                    >
                       <MdOutlineKeyboardArrowDown />
                     </span>
                   </div>
@@ -136,7 +152,7 @@ export default function CheckoutCart() {
                       },
                     }}
                     aria-label="share"
-                    onClick={() => dispatch(removeFromCart(row))}
+                    onClick={() => handleRemoveFromCart(row)}
                   >
                     <MdClose />
                   </Box>

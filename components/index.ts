@@ -8,6 +8,11 @@ import HeroBanner from "./home/heroBanner/hero-banner";
 import TrendingProducts from "./home/trending-products/trending-products";
 
 import UpcomingProducts from "./home/upcoming-products/upcoming-products";
+import CustomerInfo from "./orders/customer-info";
+import DeliveryCart from "./orders/delivery-cart";
+import DiscountCard from "./orders/discount-cart";
+import OrderInfo from "./orders/order-info";
+import PaymentCart from "./orders/payment-cart";
 import AfterHeader from "./product-category/after-header";
 import CategoryBar from "./product-category/category-bar";
 import FilterPanel from "./product-category/filter-panel";
@@ -45,4 +50,9 @@ export {
   ProductCard3,
   CheckoutCart,
   DiscountCart,
+  CustomerInfo,
+  PaymentCart,
+  DeliveryCart,
+  OrderInfo,
+  DiscountCard,
 };
