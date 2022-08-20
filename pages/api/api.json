@@ -1,8 +1,10 @@
 {
   "products": [
     {
-      "manufacturer": "ryzen for chaina",
+
+      "manufacturer": "chaina",
       "brand": "Razer",
+      "collection":"Trending",
       "title": "Razer Book 13 Core i7 11th Gen 512GB SSD 13.4 FHD Touch Laptop",
       "description": "The new Razer Book 13 Laptop is a powerful slim laptop that weighs in at just 1.4Kg. This Razer Beast is powered by Intel Core i7-1165G7 Quad-Core Processor (12MB Cache, 2.80GHz up to 4.70GHz) and has 13.4 Full HD Matte 60Hz Slim side bezel Touch display with Up to 178Â° wide viewing angles. This Razer Book 13 featured with 16GB dual-channel (fixed), 512GB PCIe SSD, Intel Iris Xe Graphics. The keyboard of the laptop has Per Key RGB feature that is powered by Razer's own Razer Chroma software and adding to that, it also has Anti-Ghosting ability with Microsoft",
       "image": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/book-13/book-13-500x500.jpg",
@@ -11,7 +13,7 @@
       "regular-price": "203,500",
       "condition": "new",
       "slug": "Electronics",
-      "category": "Electronics",
+      "categories": "Electronics",
       "keywords": "laptop,ryzen",
       "images": [
         {
@@ -24,60 +26,524 @@
           "url": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/book-13/book-13-3-500x500.jpg"
         }
       ],
+      "protection_plans": [
+        {
+          "asin": "B011WVM2B0",
+          "title": "3-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 3.99,
+            "currency": "USD",
+            "raw": "$3.99"
+          }
+        },
+        {
+          "asin": "B00VF4JT6G",
+          "title": "2-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 2.99,
+            "currency": "USD",
+            "raw": "$2.99"
+          }
+        }
+      ],
 
       "attributes": [
         {
           "name": "processor",
-          "value": "Intel Core i7-1165G7 Quad-Core Processor (12MB Cache, 2.80GHz up to 4.70GHz)"
+          "value": "Intel Core i7-1165G7 Processor (12MB Cache, 2.80GHz up to 4.70GHz)"
         },
         {
           "name": "model",
           "value": "Razer Book 13"
         },
         {
-          "name": "Display",
-          "value": "13.4 (1920 x 1200) Full HD Matte 60Hz Slim side bezel Touch display with Up to 178° wide viewing angles"
-        },
-        {
-          "name": "Memory",
+          "name": "ram",
           "value": "16GB Dual-Channel RAM"
         },
         {
-          "name": "Storage",
+          "name": "memory",
           "value": "512GB PCIe SSD"
         },
         {
-          "name": "Graphics",
-          "value": "Intel Iris Xe Graphics"
-        },
-        {
-          "name": "Operating System",
-          "value": "Windows 10 Home"
-        },
-        {
-          "name": "Battery",
-          "value": "55 WHr"
-        },
-        {
-          "name": "Adapter",
-          "value": "65W power adapter"
-        },
-        {
-          "name": "Audio",
-          "value": "3.5mm Combo-Jack 2 Speakers + Smart Amp  THX Spatial Audio 4 Mic Array"
-        },
-        {
-          "name": "Keyboard",
-          "value": "Per-Key RGB, powered by Razer Chroma Anti-Ghosting"
-        },
-        {
-          "name": "WebCam",
-          "value": "Windows Hello built-in IR HD webcam (1MP / 720P)"
-        },
-        {
-          "name": "Manufacturing Warranty",
-          "value": "1 Year"
+          "name": "display",
+          "value": "13.4 (1920 x 1200) Full HD Touch Display"
         }
+
+      ],
+      "specifications": [
+        {
+          "name": "Processor",
+          "value": "Intel Core i7-1165G7 Quad-Core Processor (12MB Cache, 2.80GHz up to 4.70GHz)"
+        },
+        {
+          "name": "Display",
+          "value": "13.4 (1920 x 1200) Full HD Matte 60Hz Slim side bezel Touch display with Up to 178° wide viewing angles"
+        }
+
+      ]
+    },
+    {
+      "manufacturer": "chaina",
+      "collection":"Trending",
+      "brand": "acer",
+      "title": "Acer Swift 3 SF314 43 R2EV AMD Ryzen 5 5500U 14 Inch FHD IPS Display Pure Silver Laptop",
+      "description": "Acer Swift 3 SF314-43-R2EV AMD Ryzen 5 5500U 14 Inch FHD IPS Display, Backlit Keyboard, Win 10, Pure Silver Laptop is a high range laptop in Bangladesh. Acer Swift 3 SF314-43-R2EV is a Acer brand laptop. Right Now available the Acer Swift 3 SF314-43-R2EV AMD Ryzen 5 5500U 14 Inch FHD IPS Display, Backlit Keyboard, Win 10, Pure Silver Laptop includes all Ryans computers branches and our website.",
+      "image": "https://www.cloud.ryanscomputers.com/cdn/products/main/acer-swift-3-sf314-43-r2ev-amd-ryzen-5-5500u-14-11622282897.webp",
+      "status": "In Stock",
+      "price": "190,00",
+      "regular-price": "203,500",
+      "condition": "new",
+      "slug": "Electronics",
+      "categories": "Electronics",
+      "keywords": "laptop,acer ssd",
+      "images": [
+        {
+          "url": "https://www.cloud.ryanscomputers.com/cdn/products/main/acer-swift-3-sf314-43-r2ev-amd-ryzen-5-5500u-14-11622282897.webp"
+        },
+        {
+          "url": "https://www.cloud.ryanscomputers.com/cdn/products/main/acer-swift-3-sf314-43-r2ev-amd-ryzen-5-5500u-14-21622282898.webp"
+        },
+        {
+          "url": "https://www.cloud.ryanscomputers.com/cdn/products/main/acer-swift-3-sf314-43-r2ev-amd-ryzen-5-5500u-14-31622282898.webp"
+        },
+        {
+          "url": "https://www.cloud.ryanscomputers.com/cdn/products/main/acer-swift-3-sf314-43-r2ev-amd-ryzen-5-5500u-14-41622283113.webp"
+        }
+      ],
+      "protection_plans": [
+        {
+          "asin": "B011WVM2B0",
+          "title": "3-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 3.99,
+            "currency": "USD",
+            "raw": "$3.99"
+          }
+        },
+        {
+          "asin": "B00VF4JT6G",
+          "title": "2-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 2.99,
+            "currency": "USD",
+            "raw": "$2.99"
+          }
+        }
+      ],
+
+      "attributes": [
+        {
+          "name": "processor",
+          "value": "Processor Type Intel Core i3"
+        },
+        {
+          "name": "model",
+          "value": "Acer Swift 3 SF314-43-R2EV"
+        },
+        {
+          "name": "ram",
+          "value": "RAM 4GB"
+        },
+        {
+          "name": "graphics",
+          "value": "Graphics Memory Shared"
+        },
+        {
+          "name": "display",
+          "value": "Display Size (Inch) 15.6"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "Brand",
+          "value": "Acer"
+        },
+        {
+          "name": "Model",
+          "value": "Acer Extensa 15 EX215-52-384M"
+        },
+        {
+          "name": "Laptop Series",
+          "value": "Extensa 15"
+        },
+        {
+          "name": "Processor Brand",
+          "value": "intel"
+        },
+        {
+          "name": "RAM",
+          "value": "4GB"
+        }
+
+      ]
+    },
+    {
+      "manufacturer": "chaina",
+      "brand": "acer",
+      "collection":"Featured",
+      "title": "Lenovo Legion Y740 Core i7 8th Gen RTX 2070 8GB Graphics Gaming Laptop With Genuine Win 10",
+      "description": "Lenovo Legion Y740 8th Gen 15.6 FHD (1920 x 1080), 72% color gamut, NVIDIAÂ® G-SYNC, 144 Hz, 300 nits, software enabled Dolby Vision HDR Laptop with Intel Core i7-8750H 6 Core Processor (2.20GHz up to 4.10 GHz with Turbo Boost, 9MB Cache) speed and 32GB DDR4 Ram is a special protective finish that also contains 1TB HDD + 512GB SSD M.2 SSD to ensure greater compatibility. In addition, it has NVIDIA GeForce RTX 2070 with Max-Q 8 GB Graphics, Backlit keyboard, and Genuine Windows 10 operating system. Its rapid charging capability can ensure 6 hours of battery backup and the approximate weight of only 2.8 kg will ensure high level of portability. Its Dolby Atmos Speaker System with Soundbar and integrated subwoofer with Smart AMP technology for gaming. This Iron Grey colored device comes with 2 years International Limited Warranty (Terms & condition Apply As Per Lenovo) Purchase latest Lenovo 8th Gen Gaming laptops at best price in Dhaka, Rangpur, Chattagram, Khulna & Sylhet with quality expert solutions. Now you can shop online and have the delivery of your 8th gen powerful graphics Lenovo laptop at any destination in Bangladesh.",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/Legion-y740/y740-500x500.jpg",
+      "status": "In Stock",
+      "price": "190,00",
+      "regular-price": "203,500",
+      "condition": "new",
+      "slug": "Electronics",
+      "categories": "Electronics",
+      "keywords": "laptop,acer ssd",
+      "images": [
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/Legion-y740/y740-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/Legion-y740/y740-2-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/Legion-y740/y740-1-500x500.jpg"
+        }
+     
+      ],
+      "protection_plans": [
+        {
+          "asin": "B011WVM2B0",
+          "title": "3-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 3.99,
+            "currency": "USD",
+            "raw": "$3.99"
+          }
+        },
+        {
+          "asin": "B00VF4JT6G",
+          "title": "2-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 2.99,
+            "currency": "USD",
+            "raw": "$2.99"
+          }
+        }
+      ],
+
+      "attributes": [
+        {
+          "name": "processor",
+          "value": "Intel Core i7-8750H (2.20GHz up to 4.10 GHz )"
+        },
+        {
+          "name": "model",
+          "value": "Lenovo Legion Y740"
+        },
+        {
+          "name": "ram",
+          "value": "32 GB DDR4 2666 MHz Ram"
+        },
+        {
+          "name": "HDD",
+          "value": "1TB HDD + 512GB M.2 SSD"
+        },
+        {
+          "name": "display",
+          "value": "15.6 FHD (1920 x 1080) IPS,144 Hz"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "Brand",
+          "value": "Acer"
+        },
+        {
+          "name": "Model",
+          "value": "Acer Extensa 15 EX215-52-384M"
+        },
+        {
+          "name": "Laptop Series",
+          "value": "Extensa 15"
+        },
+        {
+          "name": "Processor Brand",
+          "value": "intel"
+        },
+        {
+          "name": "RAM",
+          "value": "4GB"
+        }
+
+      ]
+    },
+    {
+      "manufacturer": "chaina",
+      "collection":"Featured",
+      "brand": "Razer",
+      "title": "Razer Book 13 Core i7 11th Gen 512GB SSD 13.4 FHD Touch Laptop",
+      "description": "The new Razer Book 13 Laptop is a powerful slim laptop that weighs in at just 1.4Kg. This Razer Beast is powered by Intel Core i7-1165G7 Quad-Core Processor (12MB Cache, 2.80GHz up to 4.70GHz) and has 13.4 Full HD Matte 60Hz Slim side bezel Touch display with Up to 178Â° wide viewing angles. This Razer Book 13 featured with 16GB dual-channel (fixed), 512GB PCIe SSD, Intel Iris Xe Graphics. The keyboard of the laptop has Per Key RGB feature that is powered by Razer's own Razer Chroma software and adding to that, it also has Anti-Ghosting ability with Microsoft",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15/base-model_1-500x500.jpg",
+      "status": "In Stock",
+      "price": "190,00",
+      "regular-price": "203,500",
+      "condition": "new",
+      "slug": "Electronics",
+      "categories": "Electronics",
+      "keywords": "laptop,ryzen",
+      "images": [
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15/base-model_1-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-2-500x500.jpg"
+        }
+      ],
+      "protection_plans": [
+        {
+          "asin": "B011WVM2B0",
+          "title": "3-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 3.99,
+            "currency": "USD",
+            "raw": "$3.99"
+          }
+        },
+        {
+          "asin": "B00VF4JT6G",
+          "title": "2-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 2.99,
+            "currency": "USD",
+            "raw": "$2.99"
+          }
+        }
+      ],
+
+      "attributes": [
+        {
+          "name": "processor",
+          "value": "Intel Core i7-1165G7 Processor (12MB Cache, 2.80GHz up to 4.70GHz)"
+        },
+        {
+          "name": "model",
+          "value": "Razer Book 13"
+        },
+        {
+          "name": "ram",
+          "value": "16GB Dual-Channel RAM"
+        },
+        {
+          "name": "memory",
+          "value": "512GB PCIe SSD"
+        },
+        {
+          "name": "display",
+          "value": "13.4 (1920 x 1200) Full HD Touch Display"
+        }
+
+      ],
+      "specifications": [
+        {
+          "name": "Processor",
+          "value": "Intel Core i7-1165G7 Quad-Core Processor (12MB Cache, 2.80GHz up to 4.70GHz)"
+        },
+        {
+          "name": "Display",
+          "value": "13.4 (1920 x 1200) Full HD Matte 60Hz Slim side bezel Touch display with Up to 178° wide viewing angles"
+        }
+
+      ]
+    },
+    {
+      "manufacturer": "chaina",
+      "brand": "acer",
+      "collection":"Gaming",
+      "title": "Acer Swift 3 SF314 43 R2EV AMD Ryzen 5 5500U 14 Inch FHD IPS Display Pure Silver Laptop",
+      "description": "Acer Swift 3 SF314-43-R2EV AMD Ryzen 5 5500U 14 Inch FHD IPS Display, Backlit Keyboard, Win 10, Pure Silver Laptop is a high range laptop in Bangladesh. Acer Swift 3 SF314-43-R2EV is a Acer brand laptop. Right Now available the Acer Swift 3 SF314-43-R2EV AMD Ryzen 5 5500U 14 Inch FHD IPS Display, Backlit Keyboard, Win 10, Pure Silver Laptop includes all Ryans computers branches and our website.",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-du1117tu/15s-du1117tu-001-500x500.jpg",
+      "status": "In Stock",
+      "price": "190,00",
+      "regular-price": "203,500",
+      "condition": "new",
+      "slug": "Electronics",
+      "categories": "Electronics",
+      "keywords": "laptop,acer ssd",
+      "images": [
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-du1117tu/15s-du1117tu-001-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-du1117tu/15s-du1117tu-004-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-du1117tu/15s-du1117tu-005-500x500.jpg"
+        }
+       
+      ],
+      "protection_plans": [
+        {
+          "asin": "B011WVM2B0",
+          "title": "3-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 3.99,
+            "currency": "USD",
+            "raw": "$3.99"
+          }
+        },
+        {
+          "asin": "B00VF4JT6G",
+          "title": "2-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 2.99,
+            "currency": "USD",
+            "raw": "$2.99"
+          }
+        }
+      ],
+
+      "attributes": [
+        {
+          "name": "processor",
+          "value": "Processor Type Intel Core i3"
+        },
+        {
+          "name": "model",
+          "value": "Acer Swift 3 SF314-43-R2EV"
+        },
+        {
+          "name": "ram",
+          "value": "RAM 4GB"
+        },
+        {
+          "name": "graphics",
+          "value": "Graphics Memory Shared"
+        },
+        {
+          "name": "display",
+          "value": "Display Size (Inch) 15.6"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "Brand",
+          "value": "Acer"
+        },
+        {
+          "name": "Model",
+          "value": "Acer Extensa 15 EX215-52-384M"
+        },
+        {
+          "name": "Laptop Series",
+          "value": "Extensa 15"
+        },
+        {
+          "name": "Processor Brand",
+          "value": "intel"
+        },
+        {
+          "name": "RAM",
+          "value": "4GB"
+        }
+
+      ]
+    },
+    {
+      "manufacturer": "chaina",
+      "collection":"Gaming",
+      "brand": "acer",
+      "title": "Lenovo Legion Y740 Core i7 8th Gen RTX 2070 8GB Graphics Gaming Laptop With Genuine Win 10",
+      "description": "Lenovo Legion Y740 8th Gen 15.6 FHD (1920 x 1080), 72% color gamut, NVIDIAÂ® G-SYNC, 144 Hz, 300 nits, software enabled Dolby Vision HDR Laptop with Intel Core i7-8750H 6 Core Processor (2.20GHz up to 4.10 GHz with Turbo Boost, 9MB Cache) speed and 32GB DDR4 Ram is a special protective finish that also contains 1TB HDD + 512GB SSD M.2 SSD to ensure greater compatibility. In addition, it has NVIDIA GeForce RTX 2070 with Max-Q 8 GB Graphics, Backlit keyboard, and Genuine Windows 10 operating system. Its rapid charging capability can ensure 6 hours of battery backup and the approximate weight of only 2.8 kg will ensure high level of portability. Its Dolby Atmos Speaker System with Soundbar and integrated subwoofer with Smart AMP technology for gaming. This Iron Grey colored device comes with 2 years International Limited Warranty (Terms & condition Apply As Per Lenovo) Purchase latest Lenovo 8th Gen Gaming laptops at best price in Dhaka, Rangpur, Chattagram, Khulna & Sylhet with quality expert solutions. Now you can shop online and have the delivery of your 8th gen powerful graphics Lenovo laptop at any destination in Bangladesh.",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/dell/inspiron-15-3510/inspiron-15-3510-01-500x500.jpg",
+      "status": "In Stock",
+      "price": "190,00",
+      "regular-price": "203,500",
+      "condition": "new",
+      "slug": "Electronics",
+      "categories": "Electronics",
+      "keywords": "laptop,acer ssd",
+      "images": [
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/dell/inspiron-15-3510/inspiron-15-3510-01-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/dell/inspiron-15-3510/inspiron-15-3510-03-500x500.jpg"
+        },
+        {
+          "url": "https://www.startech.com.bd/image/cache/catalog/laptop/dell/inspiron-15-3510/inspiron-15-3510-04-500x500.jpg"
+        }
+     
+      ],
+      "protection_plans": [
+        {
+          "asin": "B011WVM2B0",
+          "title": "3-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 3.99,
+            "currency": "USD",
+            "raw": "$3.99"
+          }
+        },
+        {
+          "asin": "B00VF4JT6G",
+          "title": "2-year Photo and Data Recovery Plan",
+          "price": {
+            "symbol": "$",
+            "value": 2.99,
+            "currency": "USD",
+            "raw": "$2.99"
+          }
+        }
+      ],
+
+      "attributes": [
+        {
+          "name": "processor",
+          "value": "Intel Core i7-8750H (2.20GHz up to 4.10 GHz )"
+        },
+        {
+          "name": "model",
+          "value": "Lenovo Legion Y740"
+        },
+        {
+          "name": "ram",
+          "value": "32 GB DDR4 2666 MHz Ram"
+        },
+        {
+          "name": "HDD",
+          "value": "1TB HDD + 512GB M.2 SSD"
+        },
+        {
+          "name": "display",
+          "value": "15.6 FHD (1920 x 1080) IPS,144 Hz"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "Brand",
+          "value": "Acer"
+        },
+        {
+          "name": "Model",
+          "value": "Acer Extensa 15 EX215-52-384M"
+        },
+        {
+          "name": "Laptop Series",
+          "value": "Extensa 15"
+        },
+        {
+          "name": "Processor Brand",
+          "value": "intel"
+        },
+        {
+          "name": "RAM",
+          "value": "4GB"
+        }
+
       ]
     }
   ]
