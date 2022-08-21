@@ -1,11 +1,21 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nc from "next-connect";
 import { Categories } from "../../../models";
+import { connectDB } from "./../../../utils/connectBD";
 
-const handler = nc();
+const handler = nc({
+  onError: (err, req, res: NextApiResponse, next) => {
+    console.error(err.stack);
+    res.status(500).end("Something broke!");
+  },
+  onNoMatch: (req, res) => {
+    res.status(404).end("Page is not found");
+  },
+});
 
 handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    await connectDB();
     const category = await Categories.find({});
 
     if (category) {

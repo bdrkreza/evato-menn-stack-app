@@ -2,7 +2,7 @@ import { fetchBaseQuery } from "@reduxjs/toolkit/dist/query";
 import { RootState } from "../store/store";
 
 export const baseQuery = fetchBaseQuery({
-  baseUrl: "/",
+  baseUrl: "/api",
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.token;
     console.log("token is here", token);
