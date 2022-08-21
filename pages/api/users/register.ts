@@ -16,7 +16,7 @@ const handler = nc({
 });
 
 handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
-  connectDB();
+  await connectDB();
   try {
     const { name, email, password } = req.body;
 

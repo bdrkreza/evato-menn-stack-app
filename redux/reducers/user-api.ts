@@ -8,19 +8,19 @@ export const authApi = createApi({
   tagTypes: ["users"],
   endpoints: (builder) => ({
     getUser: builder.query({
-      query: (id) => `/api/user/${id}`,
+      query: (id) => `/user/${id}`,
     }),
 
     token: builder.mutation({
       query: (body: { email: string; password: string }) => ({
-        url: `api/users/login`,
+        url: `/users/login`,
         method: "POST",
         body,
       }),
     }),
     register: builder.mutation({
       query: (body: { name: string; email: string; password: string }) => ({
-        url: `api/users/register`,
+        url: `/users/register`,
         method: "POST",
         body,
       }),
