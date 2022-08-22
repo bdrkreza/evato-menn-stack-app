@@ -16,9 +16,9 @@ const handler = nc({
 handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     await connectDB();
-    const product = await Products.find({});
+    const products = await Products.find({});
 
-    res.status(200).json({ success: true, data: product, error: false });
+    res.status(200).json({ success: true, products, error: false });
   } catch (error: any) {
     return res.status(500).json({
       success: false,
