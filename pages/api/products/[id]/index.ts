@@ -1,8 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nc from "next-connect";
-import { Products } from "../../../models";
-
-import { connectDB } from "./../../../utils/connectBD";
+import { Products } from "../../../../models";
+import { connectDB } from "../../../../utils/connectBD";
 
 const handler = nc({
   onError: (err, req, res: NextApiResponse, next) => {
@@ -15,18 +14,9 @@ const handler = nc({
 });
 
 handler.get(async (req: NextApiRequest, res: NextApiResponse) => {
-  try {
-    await connectDB();
-    const products = await Products.find({});
-    res.status(200).json({ success: true, products, error: false });
-  } catch (error: any) {
-    res.status(500).json({
-      success: false,
-      error: error.message,
-      data: null,
-      message: "database request failed!",
-    });
-  }
+  await connectDB();
+  const product = await Products.findById(req.query.id);
+  res.status(200).json({ success: true, product, error: false });
 });
 
 export default handler;

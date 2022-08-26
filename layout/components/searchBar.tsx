@@ -1,32 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, Button, Divider, InputBase } from "@mui/material";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { parseCookies } from "nookies";
+import { useRef } from "react";
 import { BsPerson, BsSearch } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
 import brandLogo from "../../assets/brandlogo/brandlogo.png";
-import { selectToken, setToken } from "../../redux";
 import NotificationCard from "./notification-card";
 import ShopDropCard from "./shop-drop-card";
 import UserDropMenu from "./user-dropdown-menu";
 type Props = {};
 
 export default function SearchBar({}: Props) {
-  const dispatch = useDispatch();
-  const user = useSelector(selectToken);
-  let loginUser = false;
-  if (user) {
-    loginUser = true;
-  } else {
-    loginUser = false;
-  }
-  useEffect(() => {
-    const token = localStorage.getItem("token") || "";
-    dispatch(setToken(token));
-  }, [dispatch]);
-
+  const { user } = parseCookies();
   const lazyRoot = useRef(null);
   return (
     <div>
@@ -87,7 +73,7 @@ export default function SearchBar({}: Props) {
                 </li>
 
                 {/* userProfile section */}
-                {user.token ? (
+                {user ? (
                   <UserDropMenu />
                 ) : (
                   <li className="nav-item">

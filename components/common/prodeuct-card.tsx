@@ -22,8 +22,10 @@ export default function ProductCard({ data }: Props) {
         <figure>
           <div className="link">
             <Link
-              href={`/product/[data.id]`}
-              as={`/product/${data._id}`}
+              href={{
+                pathname: `/product/${data._id}`,
+                query: { name: data.title },
+              }}
               passHref
             >
               <img

@@ -24,7 +24,7 @@ export interface ProductVariant {
 
 export interface IProducts {
   _id: string;
-  checked: boolean;
+  checked?: boolean;
   manufacturer: string;
   brand: string;
   collection: string;
@@ -37,11 +37,16 @@ export interface IProducts {
   slug: string;
   categories: string;
   keywords: string;
-  images: Array<string>;
+  images: Array<TImage>;
   protection_plans: Array<TProtection>;
   attributes: Array<TSpecifications>;
   specifications: Array<TSpecifications>;
+  cartQuantity: number;
 }
+
+type TImage = {
+  url: string;
+};
 
 type TSpecifications = {
   name: string;

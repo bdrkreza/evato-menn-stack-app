@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { FaList } from "react-icons/fa";
-import { ICategory } from "../../contracts/category.type";
+import { ICategory } from "../../types/category.type";
+
 import NestedMenu from "./nestedMenu";
 type Props = {
   data: ICategory | undefined;

@@ -7,10 +7,9 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
+import Link from "next/link";
 import { useSelector } from "react-redux";
 import { cartItem } from "../../redux";
-
-const TAX_RATE = 0.07;
 
 function ccyFormat(num: number) {
   return `${num.toFixed(2)}`;
@@ -20,33 +19,9 @@ function priceRow(qty: number, unit: number) {
   return qty * unit;
 }
 
-function createRow(desc: string, qty: number, unit: number) {
-  const price = priceRow(qty, unit);
-  return { desc, qty, unit, price };
-}
-
-interface Row {
-  desc: string;
-  qty: number;
-  unit: number;
-  price: number;
-}
-
-function subtotal(items: readonly Row[]) {
-  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
-}
-
-const rows = [
-  createRow("Paperclips (Box)", 100, 1.15),
-  createRow("Paper (Case)", 10, 45.99),
-  createRow("Waste Basket", 2, 17.99),
-];
-const invoiceSubtotal = subtotal(rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
-
 export default function OrderInfo() {
-  const { cartItems } = useSelector(cartItem);
+  const { cartItems, cartTotalQuantity, cartTotalAmount } =
+    useSelector(cartItem);
   return (
     <div className="order-info">
       <div className="section-title">
@@ -56,29 +31,94 @@ export default function OrderInfo() {
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="spanning table">
           <TableHead>
-            <TableRow>
-              <TableCell>Desc</TableCell>
-              <TableCell align="right">Unit</TableCell>
-              <TableCell align="right">Sum</TableCell>
+            <TableRow sx={{}} className="bg-light">
+              <TableCell>Product Name</TableCell>
+              <TableCell align="right">Price</TableCell>
+              <TableCell align="right">Total</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <TableRow key={row.desc}>
-                <TableCell>{row.desc}</TableCell>
-                <TableCell align="right">{row.unit}</TableCell>
-                <TableCell align="right">{ccyFormat(row.price)}</TableCell>
+            {cartItems.map((items) => (
+              <TableRow key={items._id}>
+                <TableCell
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: "14px",
+                    "a:hover": {
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  <Link
+                    href={{
+                      pathname: `/product/${items._id}`,
+                      query: { name: items.title },
+                    }}
+                  >
+                    {items.title}
+                  </Link>
+                </TableCell>
+                <TableCell align="right">
+                  <strong>
+                    {parseInt(items.price).toFixed(0)}৳ x {items.cartQuantity}
+                  </strong>
+                </TableCell>
+                <TableCell align="right">
+                  <strong>
+                    {priceRow(items.cartQuantity, parseInt(items?.price))}৳
+                  </strong>
+                </TableCell>
               </TableRow>
             ))}
             <TableRow>
               <TableCell rowSpan={2} />
-              <TableCell>Subtotal</TableCell>
-              <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
+              <TableCell
+                sx={{
+                  fontWeight: 600,
+                  lineHeight: "30px",
+                  fontFamily: "revert",
+                  fontSize: "20px",
+                }}
+              >
+                SubTotal
+              </TableCell>
+              <TableCell
+                align="right"
+                sx={{
+                  fontWeight: 600,
+                  lineHeight: "30px",
+                  fontFamily: "serif",
+                  fontSize: "20px",
+                  color: "red",
+                }}
+              >
+                {ccyFormat(cartTotalAmount)}৳
+              </TableCell>
             </TableRow>
 
             <TableRow>
-              <TableCell>Total</TableCell>
-              <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
+              <TableCell
+                sx={{
+                  fontWeight: 600,
+                  lineHeight: "30px",
+                  fontFamily: "revert",
+                  fontSize: "20px",
+                }}
+              >
+                Total
+              </TableCell>
+              <TableCell
+                align="right"
+                sx={{
+                  fontWeight: 600,
+                  lineHeight: "30px",
+                  fontFamily: "serif",
+                  fontSize: "20px",
+                  color: "red",
+                }}
+              >
+                {ccyFormat(cartTotalAmount)}৳
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>
