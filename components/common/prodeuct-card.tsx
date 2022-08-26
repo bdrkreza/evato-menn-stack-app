@@ -4,10 +4,14 @@ import { BsHeartFill } from "react-icons/bs";
 import { FiRefreshCw } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux";
+import { IProducts } from "../../types/product.type";
 
 import QuickView from "../quick-view/quick-view";
+type Props = {
+  data: IProducts;
+};
 
-export default function ProductCard({ data }: any) {
+export default function ProductCard({ data }: Props) {
   const dispatch = useDispatch();
   const handleAddToCart = (product: any) => {
     dispatch(addToCart(product));
@@ -18,13 +22,15 @@ export default function ProductCard({ data }: any) {
         <figure>
           <div className="link">
             <Link
-              href={`/product/[data.id]`}
-              as={`/product/${data.id}`}
+              href={{
+                pathname: `/product/${data._id}`,
+                query: { name: data.title },
+              }}
               passHref
             >
               <img
                 className="w-100 h-100 product-image"
-                src={data?.featuredAsset?.preview}
+                src={data.image}
                 alt="Publication Image"
               />
             </Link>
@@ -49,7 +55,9 @@ export default function ProductCard({ data }: any) {
 
         <div className="card-content">
           <span className="category">T-shirt</span>
-          <h3>{data?.name}</h3>
+          <h3 className="text-truncate" style={{ maxWidth: "200px" }}>
+            {data?.title}
+          </h3>
           {/* <div className="rating">
             <Rating
               name="half-rating-read"
@@ -59,7 +67,7 @@ export default function ProductCard({ data }: any) {
             />
           </div> */}
           <h4 className="price">
-            ${data.variants[0].price} <span>$299</span>
+            ${data.price} <span>{data.regular_price}</span>
           </h4>
         </div>
 

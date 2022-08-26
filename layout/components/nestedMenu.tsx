@@ -1,5 +1,6 @@
 import { MdOutlineArrowRight } from "react-icons/md";
-import { TCategory } from "../../contracts/category.type";
+import { TCategory } from "../../types/category.type";
+
 type Props = {
   data: TCategory[] | undefined;
 };

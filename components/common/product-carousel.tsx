@@ -1,22 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/jsx-key */
-
-import { useEffect, useState } from "react";
 
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ProductItem } from "../../contracts/product.type";
-import { data } from "../../pages/api/api";
+
+import { IProducts } from "../../types/product.type";
 import ProductCard from "./prodeuct-card";
 type Props = {
-  products: Array<ProductItem> | undefined;
+  products: Array<IProducts> | undefined;
 };
 export default function ProductCarousel({ products }: Props) {
-  const [item, setItem] = useState<any[] | null>([]);
-
-  useEffect(() => {
-    setItem(data);
-  }, []);
+  console.log("products is here", products);
   return (
     <>
       <div className="mt-3 product-carousel">
@@ -43,7 +36,7 @@ export default function ProductCarousel({ products }: Props) {
         >
           {products?.map((item) => {
             return (
-              <SwiperSlide key={item.id} className="swiper">
+              <SwiperSlide key={item._id} className="swiper">
                 <ProductCard data={item} />
               </SwiperSlide>
             );

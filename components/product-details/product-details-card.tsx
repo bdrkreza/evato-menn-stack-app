@@ -9,11 +9,28 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, cartItem, decreaseCart, removeFromCart } from "../../redux";
+
+import { IProducts } from "../../types/product.type";
 import ProductVerticalSlider from "./product-vertical-slider";
 
-type Props = {};
+type Props = {
+  product: IProducts | undefined;
+};
+export default function ProductDetailsCard({ product }: Props) {
+  const cart = useSelector(cartItem);
+  const dispatch = useDispatch();
+  const handleAddToCart = (product: any) => {
+    dispatch(addToCart(product));
+  };
 
-export default function ProductDetailsCard({}: Props) {
+  const handleDecreaseCart = (product: any) => {
+    dispatch(decreaseCart(product));
+  };
+  const handleRemoveFromCart = (product: any) => {
+    dispatch(removeFromCart(product));
+  };
   return (
     <Paper>
       <div className="container">
@@ -33,29 +50,30 @@ export default function ProductDetailsCard({}: Props) {
         </Card>
         <Grid container spacing={5} columns={12}>
           <Grid item xs={12} md={5}>
-            <ProductVerticalSlider />
+            <ProductVerticalSlider images={product?.images} />
           </Grid>
           <Grid item xs={12} md={7}>
             <div className="product-content">
               <div className="product-name">
-                <h1> Logitech Signature M650 Wireless Mouses</h1>
+                <h1>{product?.title}</h1>
               </div>
               <div className="product-info">
                 <ul className="px-0">
                   <li>
-                    price: <span>3,299 tk</span>
+                    price: <span>{product?.price}</span>
                   </li>
                   <li>
-                    Regular price: <span>3,299 tk</span>
+                    Regular price: <span>{product?.regular_price}</span>
                   </li>
                   <li>
-                    status: <span>In Stock</span>
+                    status: <span>{product?.status}</span>
                   </li>
                   <li>
-                    Product code: <span>2266</span>
+                    Product code:{" "}
+                    <span>{product?.specifications[1].value}</span>
                   </li>
                   <li>
-                    brand: <span>Logitech</span>{" "}
+                    brand: <span>{product?.brand}</span>
                   </li>
                 </ul>
               </div>
@@ -63,11 +81,11 @@ export default function ProductDetailsCard({}: Props) {
               <div className="short-description">
                 <h1>key Features</h1>
                 <ul>
-                  <li>Model: M650</li>
-                  <li>Connectivity: 2.4 GHz RF, Bluetooth</li>
-                  <li>DPI: 400 to 4000DPI</li>
-                  <li>Wireless Range: 10m</li>
-                  <li>Number of Buttons: 5 Buttons</li>
+                  {product?.attributes?.map((att: any, index: number) => (
+                    <li key={index}>
+                      {att.name}: {att.value}
+                    </li>
+                  ))}
                   <li className="view-more" data-area="specification">
                     <span> View More Info</span>
                   </li>
@@ -101,7 +119,10 @@ export default function ProductDetailsCard({}: Props) {
               </div>
               <div className="cart-option">
                 <label className="quantity">
-                  <span className="ctl">
+                  <span
+                    className="ctl"
+                    onClick={() => handleDecreaseCart(product)}
+                  >
                     <RemoveIcon />
                   </span>
                   <span className="qty">
@@ -109,15 +130,19 @@ export default function ProductDetailsCard({}: Props) {
                       type="text"
                       name="quantity"
                       id="input-quantity"
-                      value="1"
+                      value={cart.cartTotalQuantity}
                     />
                   </span>
-                  <span className="ctl">
+                  <span
+                    className="ctl"
+                    onClick={() => handleRemoveFromCart(product)}
+                  >
                     <AddIcon />
                   </span>
                   <input type="hidden" name="product_id" value="22616" />
                 </label>
                 <Button
+                  onClick={() => handleAddToCart(product)}
                   sx={{
                     "&.Mui-selected": {
                       outline: "none",

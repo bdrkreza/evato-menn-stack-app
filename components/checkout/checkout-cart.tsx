@@ -6,6 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Link from "next/link";
+import { useEffect } from "react";
 import {
   MdClose,
   MdKeyboardArrowUp,
@@ -13,7 +14,12 @@ import {
 } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { cartItem, removeFromCart } from "../../redux";
-import { addToCart, decreaseCart } from "../../redux/slices/cartSlice";
+import {
+  addToCart,
+  decreaseCart,
+  getTotals,
+} from "../../redux/slices/cartSlice";
+import { IProducts } from "../../types/product.type";
 
 const TAX_RATE = 0.07;
 
@@ -25,35 +31,22 @@ function priceRow(qty: number, unit: number) {
   return qty * unit;
 }
 
-function createRow(desc: string, qty: number, unit: number) {
-  const price = priceRow(qty, unit);
-  return { desc, qty, unit, price };
+function subtotal(items: readonly IProducts[]) {
+  return items
+    .map(({ price }) => parseInt(price))
+    .reduce((sum, i) => sum + i, 0);
 }
-
-interface Row {
-  desc: string;
-  qty: number;
-  unit: number;
-  price: number;
-}
-
-function subtotal(items: readonly Row[]) {
-  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
-}
-
-const rows = [
-  createRow("Paperclips (Box)", 100, 1.15),
-  createRow("Paper (Case)", 10, 45.99),
-  createRow("Waste Basket", 2, 17.99),
-];
-
-const invoiceSubtotal = subtotal(rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
 export default function CheckoutCart() {
   const dispatch = useDispatch();
-  const { cartItems } = useSelector(cartItem);
+  const cart = useSelector(cartItem);
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [dispatch, cart]);
+
+  const invoiceSubtotal = subtotal(cart.cartItems);
+  const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+  const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
   const handleAddToCart = (product: any) => {
     dispatch(addToCart(product));
@@ -71,12 +64,6 @@ export default function CheckoutCart() {
     <TableContainer className="table">
       <Table sx={{ minWidth: 700 }} aria-label="spanning table">
         <TableHead>
-          {/* <TableRow>
-            <TableCell align="center" colSpan={5}>
-              Details
-            </TableCell>
-            <TableCell align="right">Price</TableCell>
-          </TableRow> */}
           <TableRow>
             <TableCell className="table-cell">Image</TableCell>
             <TableCell className="table-cell">Product Name</TableCell>
@@ -91,10 +78,11 @@ export default function CheckoutCart() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {cartItems?.map((row) => (
-            <TableRow key={row.id}>
+          {cart.cartItems?.map((data) => (
+            <TableRow key={data._id}>
               <TableCell
                 sx={{
+                  maxWidth: "100px",
                   img: {
                     height: "20%",
                     width: "20%",
@@ -105,15 +93,29 @@ export default function CheckoutCart() {
               >
                 <CardMedia
                   component="img"
-                  image={row.featuredAsset.preview}
+                  image={data.image}
                   alt="CardMedia Image Example"
                   title="CardMedia Image Example"
                 />
               </TableCell>
-              <TableCell className="t-link">
-                <Link href={"/product-details"}>{row.name}</Link>
+              <TableCell className="t-link bg-gray w-25">
+                <Link
+                  href={{
+                    pathname: `/product/${data._id}`,
+                    query: { name: data.title },
+                  }}
+                >
+                  <span
+                    className="d-inline-block text-truncate title"
+                    style={{ maxWidth: "350px" }}
+                  >
+                    {data.title}
+                  </span>
+                </Link>
               </TableCell>
-              <TableCell>product model</TableCell>
+              <TableCell sx={{ maxWidth: "150px" }}>
+                {data.specifications[1].value}
+              </TableCell>
               <TableCell align="right">
                 <label className="quantity">
                   <span className="qty">
@@ -121,16 +123,16 @@ export default function CheckoutCart() {
                       type="text"
                       name="quantity"
                       id="input-quantity"
-                      value={row.cartQuantity}
+                      value={data.cartQuantity}
                     />
                   </span>
                   <div>
-                    <span className="ctl" onClick={() => handleAddToCart(row)}>
+                    <span className="ctl" onClick={() => handleAddToCart(data)}>
                       <MdKeyboardArrowUp />
                     </span>
                     <span
                       className="ctl"
-                      onClick={() => handleDecreaseCart(row)}
+                      onClick={() => handleDecreaseCart(data)}
                     >
                       <MdOutlineKeyboardArrowDown />
                     </span>
@@ -152,28 +154,32 @@ export default function CheckoutCart() {
                       },
                     }}
                     aria-label="share"
-                    onClick={() => handleRemoveFromCart(row)}
+                    onClick={() => handleRemoveFromCart(data)}
                   >
                     <MdClose />
                   </Box>
                 </label>
               </TableCell>
-              <TableCell align="right">{row?.variants[0].price}৳</TableCell>
               <TableCell align="right">
-                <strong>{ccyFormat(row.variants[0].price)}৳</strong>
+                {ccyFormat(parseInt(data?.price))}৳
+              </TableCell>
+              <TableCell align="right">
+                <strong>
+                  {priceRow(data?.cartQuantity, parseInt(data?.price))}৳
+                </strong>
               </TableCell>
             </TableRow>
           ))}
           <TableRow>
             <TableCell rowSpan={3} colSpan={3} />
             <TableCell className="td" colSpan={2}>
-              Subtotal
+              Sub-total
             </TableCell>
             <TableCell align="right" className="td-price">
-              {ccyFormat(invoiceSubtotal)}৳
+              {cart.cartTotalAmount}৳
             </TableCell>
           </TableRow>
-          <TableRow>
+          {/* <TableRow>
             <TableCell className="td">Tax</TableCell>
             <TableCell align="right">
               {`${(TAX_RATE * 100).toFixed(0)} %`}
@@ -181,14 +187,14 @@ export default function CheckoutCart() {
             <TableCell className="td-price" align="right">
               {ccyFormat(invoiceTaxes)}৳
             </TableCell>
-          </TableRow>
+          </TableRow> */}
 
           <TableRow>
             <TableCell className="td" colSpan={2}>
               Total
             </TableCell>
             <TableCell className="td-price" align="right">
-              {ccyFormat(invoiceTotal)}৳
+              {cart.cartTotalAmount}৳
             </TableCell>
           </TableRow>
         </TableBody>

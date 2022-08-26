@@ -1,13 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
+import Cookies from "js-cookie";
+import { toast } from "react-toastify";
 import { RootState } from "../store/store";
+
+type TUser = {
+  name: string;
+  email: string;
+  role: string;
+};
+
 interface IAuthState {
-  token: string | null;
-  isLoggedIn: boolean;
+  token: string | undefined;
 }
 
 const initialState: IAuthState = {
-  token: null,
-  isLoggedIn: false,
+  token: Cookies.get("user"),
 };
 
 const authSlice = createSlice({
@@ -16,14 +23,15 @@ const authSlice = createSlice({
 
   reducers: {
     setToken: (state, { payload }) => {
-      localStorage.setItem("token", payload);
+      Cookies.set("user", payload);
       state.token = payload;
-      state.isLoggedIn = payload;
+      toast.success(`${payload?.user?.name} Login successfully`, {
+        position: "bottom-left",
+      });
     },
     logout: (state) => {
-      localStorage.clear();
-      state.token = null;
-      state.isLoggedIn = false;
+      Cookies.remove("user");
+      state.token = undefined;
     },
   },
 });

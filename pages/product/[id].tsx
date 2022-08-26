@@ -1,26 +1,23 @@
 import { Container, Grid } from "@mui/material";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
 
-import { ParsedUrlQuery } from "querystring";
 import {
   ProductDetailsCard,
   ProductDetailsTabs,
   ProductRelated,
 } from "../../components";
-import { ProductItem } from "../../contracts/product.type";
-import json from "../api/data.json";
+import { useGetProductQuery } from "../../redux";
 
-interface IParams extends ParsedUrlQuery {
-  id: string;
-}
-interface Props {
-  product: ProductItem;
-}
+export default function ProductDetails() {
+  const { query } = useRouter();
+  const id: any = query.id;
+  const { data } = useGetProductQuery(id, {
+    refetchOnFocus: true,
+  });
 
-export default function ProductDetails({ product }: Props) {
   return (
     <div className="bg-light">
-      <ProductDetailsCard />
+      <ProductDetailsCard product={data?.product} />
       <div className="mt-5">
         <Container>
           <Grid container spacing={3}>
@@ -37,23 +34,23 @@ export default function ProductDetails({ product }: Props) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const resp = await json.products;
-  const paths = resp.map((product: any) => ({
-    params: { id: product.id },
-  }));
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const resp = await json.products;
+//   const paths = resp.map((product: any) => ({
+//     params: { id: product._id },
+//   }));
 
-  return { paths, fallback: false };
-};
+//   return { paths, fallback: false };
+// };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { id } = params as IParams;
-  const response = await json.products;
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const { id } = params as IParams;
+//   const response = await json.products;
 
-  const products = response.filter((item) => item.id === id);
-  return {
-    props: {
-      product: products[0],
-    },
-  };
-};
+//   const products = response.filter((item) => item.id === id);
+//   return {
+//     props: {
+//       product: products,
+//     },
+//   };
+// };

@@ -16,7 +16,7 @@ const handler = nc({
 });
 
 handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
-  await connectDB()
+  await connectDB();
   try {
     const { email, password } = req.body;
 
@@ -27,10 +27,19 @@ handler.post(async (req: NextApiRequest, res: NextApiResponse) => {
     if (!isMatch)
       return res.status(400).json({ message: "Incorrect password." });
 
+    const getUser = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+    };
     // If login success , create access token and refresh token
-    const accesstoken = createAccessToken({ id: user._id });
-
-    res.json({ success: true, token: accesstoken, error: false });
+    const accessToken = createAccessToken(getUser);
+    res.json({
+      success: true,
+      token: accessToken,
+      error: false,
+    });
   } catch (error: any) {
     res.status(500).json({
       success: false,

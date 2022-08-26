@@ -1,22 +1,20 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { data } from "../../pages/api/api";
+
+type TImage = {
+  url: string | undefined;
+};
 
 interface IProps {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  img: string;
+  images: TImage[] | undefined;
 }
 
-const ProductVerticalSlider: React.FC<any> = () => {
-  const [slectedImage, setSelectedImage] = useState<string>(data[0].img);
+const ProductVerticalSlider = ({ images }: IProps) => {
+  const [slectedImage, setSelectedImage] = useState();
 
   const handleChangeImage = (e: any) => {
-    console.log(e);
-    setSelectedImage(e.target.src);
+    setSelectedImage(e.target?.src);
   };
   return (
     <div className="product-slider">
@@ -42,15 +40,15 @@ const ProductVerticalSlider: React.FC<any> = () => {
           spaceBetween={3}
           slidesPerView={3}
         >
-          {data.map((image, i) => (
-            <SwiperSlide key={i}>
+          {images?.map((image: TImage, index: number) => (
+            <SwiperSlide key={index}>
               <motion.img
                 whileTap={{ scale: 0.9 }}
                 onClick={handleChangeImage}
-                src={image.img}
+                src={image?.url}
                 loading="lazy"
                 className={`product-slider__images-image ${
-                  image.img === slectedImage ? "active-slide" : ""
+                  image.url === slectedImage ? "active-slide" : ""
                 }`}
               />
             </SwiperSlide>

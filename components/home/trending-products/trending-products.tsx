@@ -1,13 +1,13 @@
-import { ProductItem } from "../../../contracts/product.type";
+import { IProducts } from "../../../types/product.type";
 import ProductCarousel from "../../common/product-carousel";
 
 type Props = {
-  products: Array<ProductItem> | undefined;
+  products: Array<IProducts> | undefined;
 };
 
 export default function TrendingProducts({ products }: Props) {
-  const product: ProductItem[] | undefined = products?.filter(
-    (item: ProductItem) => item?.category === "trending"
+  const product: IProducts[] | undefined = products?.filter(
+    (item: IProducts) => item?.collection === "trending"
   );
   // console.log("trending product", product);
   return (

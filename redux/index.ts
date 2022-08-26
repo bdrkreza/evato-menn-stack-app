@@ -1,4 +1,19 @@
+import { useGetProductQuery, useGetProductsQuery } from "./reducers/productApi";
 import { selectToken, setToken } from "./slices/authSlice";
-import { addToCart, cartItem, removeFromCart } from "./slices/cartSlice";
+import {
+  addToCart,
+  cartItem,
+  decreaseCart,
+  removeFromCart,
+} from "./slices/cartSlice";
 
-export { setToken, selectToken, addToCart, cartItem, removeFromCart };
+export {
+  useGetProductsQuery,
+  useGetProductQuery,
+  setToken,
+  selectToken,
+  addToCart,
+  cartItem,
+  removeFromCart,
+  decreaseCart,
+};

@@ -1,19 +1,12 @@
-import type { GetStaticProps } from "next";
 import Head from "next/head";
-import {
-  FeaturedProducts,
-  GamingProducts,
-  HeroBanner,
-  TrendingProducts,
-  UpcomingProducts,
-} from "../components";
-import { ProductItem } from "../contracts/product.type";
+import { FeaturedProducts, HeroBanner, TrendingProducts } from "../components";
+import { useGetProductsQuery } from "../redux";
+
 import styles from "../styles/Home.module.css";
-import product from "./api/data.json";
-interface Props {
-  products: Array<ProductItem>;
-}
-const Home = ({ products }: Props) => {
+
+const Home = () => {
+  const { data, isFetching, isLoading, error } = useGetProductsQuery();
+  console.log("data is ", data);
   return (
     <div className={styles.container}>
       <Head>
@@ -24,22 +17,13 @@ const Home = ({ products }: Props) => {
 
       <main className={styles.main}>
         <HeroBanner />
-        <TrendingProducts products={products} />
-        <FeaturedProducts products={products} />
-        <GamingProducts products={products} />
-        <UpcomingProducts products={products} />
+        <TrendingProducts products={data?.products} />
+        <FeaturedProducts products={data?.products} />
+        {/* <GamingProducts products={data?.products} /> */}
+        {/* <UpcomingProducts products={data?.products} /> */}
       </main>
     </div>
   );
 };
 
 export default Home;
-
-export const getStaticProps: GetStaticProps = async (): Promise<any> => {
-  const { products } = await product;
-  return {
-    props: {
-      products: products,
-    },
-  };
-};

@@ -7,6 +7,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { Tab } from "@mui/material";
 import { motion } from "framer-motion";
+import { parseCookies } from "nookies";
 import { SyntheticEvent, useState } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import {
@@ -119,8 +120,8 @@ export default function Profile({}: Props) {
 }
 
 export async function getServerSideProps(ctx: any) {
-  const { token } = ctx;
-  if (!token) {
+  const { user } = parseCookies(ctx);
+  if (!user) {
     ctx.res.writeHead(302, { location: "/signin" });
     ctx.res.end();
   }

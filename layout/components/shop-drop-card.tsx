@@ -21,11 +21,16 @@ import Link from "next/link";
 import { FiShoppingBag } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { cartItem, removeFromCart } from "../../redux";
+import { getTotals } from "../../redux/slices/cartSlice";
 
 export default function ShopDropCard() {
   const dispatch = useDispatch();
   const product = useSelector(cartItem);
-  console.log(product);
+
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [dispatch, product]);
+
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
   const handleToggle = () => {
@@ -41,15 +46,6 @@ export default function ShopDropCard() {
 
     setOpen(false);
   };
-
-  function handleListKeyDown(event: React.KeyboardEvent) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === "Escape") {
-      setOpen(false);
-    }
-  }
 
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = useRef(open);
@@ -73,7 +69,7 @@ export default function ShopDropCard() {
           onClick={handleToggle}
         >
           <a className="nav-link">
-            {open ? null : <span>{product?.cartItems?.length}</span>}
+            {open ? null : <span>{product?.cartTotalQuantity}</span>}
             <FiShoppingBag />
           </a>
         </Box>
@@ -146,14 +142,14 @@ export default function ShopDropCard() {
                         >
                           <strong>items</strong>
                           <Typography component={"h1"}>
-                            {product?.cartItems?.length}
+                            {product?.cartTotalQuantity}
                           </Typography>
                         </Box>
                       </Typography>
                     </CardContent>
 
                     <Divider />
-                    {product?.cartItems?.length === 0 ? (
+                    {product?.cartTotalQuantity === 0 ? (
                       <Typography
                         sx={{
                           textAlign: "center",
@@ -196,7 +192,7 @@ export default function ShopDropCard() {
                           >
                             <CardMedia
                               component="img"
-                              image={data.featuredAsset.preview}
+                              image={data.image}
                               alt="Paella dish"
                             />
                             <Typography
@@ -219,14 +215,21 @@ export default function ShopDropCard() {
                               }}
                             >
                               <Typography component={"h1"}>
-                                <span
-                                  className="text-truncate title"
-                                  style={{ maxWidth: "200px" }}
+                                <Link
+                                  href={{
+                                    pathname: `/product/${data._id}`,
+                                    query: { name: data.title },
+                                  }}
                                 >
-                                  {data.name}
-                                </span>
+                                  <span
+                                    className="d-inline-block text-truncate title"
+                                    style={{ maxWidth: "200px" }}
+                                  >
+                                    {data.title}
+                                  </span>
+                                </Link>
                                 <Typography component={"h2"}>
-                                  {data.cartQuantity}x {data.variants[0].price}৳
+                                  {data.cartQuantity}x {data.price}৳
                                 </Typography>
                               </Typography>
                               <Box

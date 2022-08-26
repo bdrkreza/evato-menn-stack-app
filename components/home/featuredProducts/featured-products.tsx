@@ -1,12 +1,12 @@
-import { ProductItem } from "../../../contracts/product.type";
+import { IProducts } from "../../../types/product.type";
 import ProductCarousel from "../../common/product-carousel";
 
 type Props = {
-  products: Array<ProductItem> | undefined;
+  products: Array<IProducts> | undefined;
 };
 export default function FeaturedProducts({ products }: Props) {
-  const product: ProductItem[] | undefined = products?.filter(
-    (item: ProductItem) => item?.category === "featured"
+  const product: Array<IProducts> | undefined = products?.filter(
+    (item: IProducts) => item?.collection.toLowerCase() === "featured"
   );
   return (
     <div>
