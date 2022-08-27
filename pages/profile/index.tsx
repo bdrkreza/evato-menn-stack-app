@@ -18,22 +18,19 @@ import {
   ProfileInfo,
   Wishlist,
 } from "../../components";
+import { useGetUserQuery } from "../../redux/reducers/user-api";
+
 type Props = {};
 
-export default function Profile({}: Props) {
-  // const user = useSelector(selectToken);
-  // const router = useRouter();
-  // useEffect(() => {
-  //   // checks if the user is authenticated
-  //   user ? router.push("/profile") : router.push("/");
-  // }, [user]);
-
+export default function Profile({ user }: any) {
+  const { data, error } = useGetUserQuery();
+  console.log("profile data", data);
   const [show, setShow] = useState(true);
   const toggle = () => {
     setShow((show) => !show);
   };
   const [navItem, setNavItem] = useState("orders");
-  console.log(navItem);
+
   const handleChange = (event: SyntheticEvent, newValue: string) => {
     setNavItem(newValue);
   };
@@ -120,8 +117,8 @@ export default function Profile({}: Props) {
 }
 
 export async function getServerSideProps(ctx: any) {
-  const { user } = parseCookies(ctx);
-  if (!user) {
+  const { token } = parseCookies(ctx);
+  if (!token) {
     ctx.res.writeHead(302, { location: "/signin" });
     ctx.res.end();
   }

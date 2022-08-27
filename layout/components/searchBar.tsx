@@ -11,8 +11,18 @@ import ShopDropCard from "./shop-drop-card";
 import UserDropMenu from "./user-dropdown-menu";
 type Props = {};
 
+const parseJwt = (token: string) => {
+  try {
+    return JSON.parse(atob(token.split(".")[1]));
+  } catch (e) {
+    return null;
+  }
+};
+
 export default function SearchBar({}: Props) {
-  const { user } = parseCookies();
+  const { token } = parseCookies();
+  const user = parseJwt(token);
+
   const lazyRoot = useRef(null);
   return (
     <div>
@@ -73,8 +83,8 @@ export default function SearchBar({}: Props) {
                 </li>
 
                 {/* userProfile section */}
-                {user ? (
-                  <UserDropMenu />
+                {token ? (
+                  <UserDropMenu user={user} />
                 ) : (
                   <li className="nav-item">
                     <Link href="signin">

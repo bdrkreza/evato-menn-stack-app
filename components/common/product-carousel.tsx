@@ -9,7 +9,6 @@ type Props = {
   products: Array<IProducts> | undefined;
 };
 export default function ProductCarousel({ products }: Props) {
-  console.log("products is here", products);
   return (
     <>
       <div className="mt-3 product-carousel">

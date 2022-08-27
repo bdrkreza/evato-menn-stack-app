@@ -11,8 +11,12 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/slices/authSlice";
+import { TUser } from "../../types/user.type";
+type Props = {
+  user: TUser | null;
+};
 
-export default function UserDropMenu() {
+export default function UserDropMenu({ user }: Props) {
   const router = useRouter();
   const dispatch = useDispatch();
   const [open, setOpen] = React.useState(false);
@@ -62,7 +66,7 @@ export default function UserDropMenu() {
         onClick={handleToggle}
       >
         <a className="nav-link  d-block">
-          <Avatar sx={{ width: 25, height: 25 }}>M</Avatar>
+          <Avatar sx={{ width: 25, height: 25 }}>{user?.name}</Avatar>
         </a>
       </Box>
       <Popper
@@ -112,7 +116,7 @@ export default function UserDropMenu() {
                 <Card>
                   <Link href="/profile">
                     <MenuItem onClick={handleClose}>
-                      <Avatar /> Profile
+                      <Avatar /> {user?.name}
                     </MenuItem>
                   </Link>
 

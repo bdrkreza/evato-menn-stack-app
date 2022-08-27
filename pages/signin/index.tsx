@@ -13,13 +13,16 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { setToken } from "../../redux";
 import { useTokenMutation } from "../../redux/reducers/user-api";
 const theme = createTheme();
-
+type FormValues = {
+  email: string;
+  password: string;
+};
 export default function SignIn() {
   const dispatch = useDispatch();
   const router = useRouter();
@@ -31,9 +34,12 @@ export default function SignIn() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormValues>();
 
-  const onSubmit = async (data: any) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data: {
+    email: string;
+    password: string;
+  }) => {
     const { email, password } = data;
     if (email && password) {
       await getUser({
