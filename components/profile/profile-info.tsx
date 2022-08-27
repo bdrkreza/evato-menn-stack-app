@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import PersonIcon from "@mui/icons-material/Person";
 import { Box, Card, Grid, Typography } from "@mui/material";
+import { useGetUserQuery } from "../../redux";
 
 type Props = {};
 
 export default function ProfileInfo({}: Props) {
+  const { data, error } = useGetUserQuery();
+  console.log("data is user", data);
   return (
     <div>
       <Box
@@ -64,9 +67,10 @@ export default function ProfileInfo({}: Props) {
                       fontWeight: 600,
                       lineHeight: "1.5",
                       whiteSpace: "normal",
+                      color: "red",
                     }}
                   >
-                    Ralph Edwards
+                    {data?.name}
                   </Typography>
                 </Typography>
                 <Typography
@@ -143,7 +147,7 @@ export default function ProfileInfo({}: Props) {
             last Name <br /> <span>Edwards</span>
           </Typography>
           <Typography component={"h1"}>
-            email <br /> <span>rkreza@gmail.com</span>
+            email <br /> <span>{data?.email}</span>
           </Typography>
           <Typography component={"h1"}>
             phone <br /> <span>01789380336</span>

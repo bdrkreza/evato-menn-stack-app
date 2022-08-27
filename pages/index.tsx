@@ -1,12 +1,18 @@
 import Head from "next/head";
-import { FeaturedProducts, HeroBanner, TrendingProducts } from "../components";
+import {
+  FeaturedProducts,
+  GamingProducts,
+  HeroBanner,
+  TrendingProducts,
+  UpcomingProducts,
+} from "../components";
 import { useGetProductsQuery } from "../redux";
 
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
   const { data, isFetching, isLoading, error } = useGetProductsQuery();
-  console.log("data is ", data);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,8 +25,8 @@ const Home = () => {
         <HeroBanner />
         <TrendingProducts products={data?.products} />
         <FeaturedProducts products={data?.products} />
-        {/* <GamingProducts products={data?.products} /> */}
-        {/* <UpcomingProducts products={data?.products} /> */}
+        <GamingProducts products={data?.products} />
+        <UpcomingProducts products={data?.products} />
       </main>
     </div>
   );

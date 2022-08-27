@@ -67,7 +67,7 @@ export default function ProductCard({ data }: Props) {
             />
           </div> */}
           <h4 className="price">
-            ${data.price} <span>{data.regular_price}</span>
+            ${data?.price} <span>{data?.regular_price}</span>
           </h4>
         </div>
 

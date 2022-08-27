@@ -3,18 +3,12 @@ import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { RootState } from "../store/store";
 
-type TUser = {
-  name: string;
-  email: string;
-  role: string;
-};
-
 interface IAuthState {
   token: string | undefined;
 }
 
 const initialState: IAuthState = {
-  token: Cookies.get("user"),
+  token: Cookies.get("token"),
 };
 
 const authSlice = createSlice({
@@ -23,14 +17,14 @@ const authSlice = createSlice({
 
   reducers: {
     setToken: (state, { payload }) => {
-      Cookies.set("user", payload);
+      Cookies.set("token", payload);
       state.token = payload;
       toast.success(`${payload?.user?.name} Login successfully`, {
         position: "bottom-left",
       });
     },
     logout: (state) => {
-      Cookies.remove("user");
+      Cookies.remove("token");
       state.token = undefined;
     },
   },
