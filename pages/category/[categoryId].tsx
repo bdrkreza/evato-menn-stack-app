@@ -1,9 +1,9 @@
 import { Grid } from "@mui/material";
-import { CategoryBar, FilterPanel, ProductCart } from "../../components";
-import { ProductItem } from "../../contracts/product.type";
-import product from "../api/data.json";
+import { CategoryBar, FilterPanel } from "../../components";
+import { IProducts } from "../../types/product.type";
+
 type Props = {
-  products: Array<ProductItem>;
+  products: Array<IProducts>;
 };
 
 export default function ProductCategory() {
@@ -21,11 +21,11 @@ export default function ProductCategory() {
               spacing={{ xs: 2, md: 2 }}
               columns={{ xs: 4, md: 12 }}
             >
-              {product.products.map((item: any, index) => (
+              {/* {product.map((item: any, index) => (
                 <Grid item xs={4} sm={4} md={4} key={index}>
                   <ProductCart product={item} />
                 </Grid>
-              ))}
+              ))} */}
             </Grid>
           </div>
         </div>

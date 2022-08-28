@@ -23,6 +23,7 @@ export interface ProductVariant {
 }
 
 export interface IProducts {
+  id: any;
   _id: string;
   checked?: boolean;
   manufacturer: string;

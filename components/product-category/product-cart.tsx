@@ -8,23 +8,26 @@ import Link from "next/link";
 import { BsHeartFill } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 import { FiRefreshCw } from "react-icons/fi";
-import { ProductItem } from "../../contracts/product.type";
+import { IProducts } from "../../types/product.type";
+
 type Props = {
-  product: ProductItem;
+  product: IProducts;
 };
 export default function ProductCart({ product }: Props) {
   return (
     <Card sx={{ maxWidth: 345 }} className="cart-container">
       <figure>
         <Link
-          href={`/product/${product.id}`}
-          as={`/product/${product.id}`}
+          href={{
+            pathname: `/product/${product._id}`,
+            query: { name: product.title },
+          }}
           passHref
         >
           <CardMedia
             component="img"
             height="180"
-            image={product.featuredAsset.preview}
+            image={product.image}
             alt="green iguana"
           />
         </Link>
@@ -49,8 +52,10 @@ export default function ProductCart({ product }: Props) {
       </figure>
       <CardContent>
         <Link
-          href={`/product/${product.id}`}
-          as={`/product/${product.id}`}
+          href={{
+            pathname: `/product/${product._id}`,
+            query: { name: product.title },
+          }}
           passHref
         >
           <Typography gutterBottom component="h1">
