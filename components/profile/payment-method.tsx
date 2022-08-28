@@ -1,7 +1,7 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import PaymentIcon from "@mui/icons-material/Payment";
-import { Box, Card, Grid, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
 type Props = {};
 
 export default function PaymentMethod({}: Props) {
@@ -48,7 +48,12 @@ export default function PaymentMethod({}: Props) {
                   }}
                 >
                   <Typography sx={{ display: "flex", gap: 3 }}>
-                    <img src={pay.img} alt="" />
+                    <CardMedia
+                      component="img"
+                      height="100%"
+                      image={pay.img}
+                      alt="Paella dish"
+                    />
                     {pay.name}
                   </Typography>
                   <Typography>{pay.card}</Typography>
